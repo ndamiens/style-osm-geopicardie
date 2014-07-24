@@ -316,10 +316,8 @@
       text-halo-radius:2;
       text-character-spacing:1;
       text-placement:line;
-      
       text-min-path-length:150;
       text-min-distance:100;
-/*      text-spacing:400;*/
     }
   }
   [type='trunk'] {
@@ -334,9 +332,6 @@
       text-placement:line;
       text-min-path-length:150;
       text-min-distance:100;
-/*      text-min-path-length:150;
-      text-min-distance:400;
-      text-spacing:100;*/
     }
   }
   [type='primary'][zoom>11],
@@ -350,12 +345,8 @@
     text-halo-radius:2;
     text-character-spacing:1;
     text-placement:line;
-  	text-min-path-length: 150;
+    text-min-path-length: 150;
     text-min-distance:100;
-/*
-  	text-min-path-length: 150;
-    text-min-distance:400;
-    text-spacing:100;*/
   }
   [class='minorroads'][zoom>13] {
     text-name:'[ref]';
@@ -366,12 +357,8 @@
     text-halo-radius:2;
     text-character-spacing:1.2;
     text-placement:line;
-  	text-min-path-length: 150;
+    text-min-path-length: 150;
     text-min-distance:100;
-/*
-  	text-min-path-length: 150;
-    text-min-distance:400;
-    text-spacing:100;*/
   }
 }
 
@@ -387,8 +374,6 @@
     text-halo-fill:@road_halo;
     text-halo-radius:2;
     text-character-spacing:1;
-/*    text-min-distance:200;
-    text-spacing:100;*/
   }
   [class='minorroads'][zoom>13] {
     [type!='cycleway'][type!='path'] {
@@ -399,8 +384,6 @@
       text-fill:@road_text;
       text-halo-fill:@road_halo;
       text-halo-radius:2;
-/*      text-min-distance:200;
-      text-spacing:100;*/
       text-character-spacing:1.2;
     }
   }
@@ -413,8 +396,6 @@
       text-fill:@road_text;
       text-halo-fill:@road_halo;
       text-halo-radius:2;
-/*      text-min-distance:200;
-      text-spacing:100;*/
       text-character-spacing:1.2;
     }
   }
@@ -437,7 +418,6 @@
   text-character-spacing: 2;
   text-wrap-width: 33;
 }
-
 #area_label[type='garden'][zoom>=16],
 #area_label[type='village_green'][zoom>=16],
 #area_label[type='park'][zoom>=16],
@@ -462,7 +442,6 @@
   text-wrap-width: 33;
   text-allow-overlap: false;
 }
-
 #area_label[type='hospital'][zoom>=16],
 #area_label[type='school'][zoom>=16],
 #area_label[type='college'][zoom>=16],
