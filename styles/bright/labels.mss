@@ -35,12 +35,10 @@
     text-allow-overlap: false;
     text-min-padding: 0;
     text-placements: 'NE,NW,N,E,SE,W,SW,S';
-    text-dx: 7;
     text-dy: -7;
-    /*marker-file: url(img/icon/dot_white_thick.svg);
-    marker-width: 11;
-    marker-opacity: @city_marker_opacity;*/
-    
+    point-file: url(img/icon/dot_white_thick.svg);
+    point-transform: scale(0.18,0.18);
+    point-allow-overlap: true;
     [zoom>4] {
       text-transform: uppercase;
     }
@@ -48,8 +46,8 @@
       text-size: 9;
       text-dx: 5;
       text-dy: -5;
-      /*marker-file: url(img/icon/dot_white_thick_small.svg);
-      marker-width: 7;*/
+      marker-file: url(img/icon/dot_white_thick_small.svg);
+      marker-width: 7;
     }
   }
 
@@ -69,13 +67,15 @@
     text-placement-type: simple;
     text-allow-overlap: false;
     text-min-padding: 0;
-    text-placements: 'NE,NW,N,E,SE,W,SW,S';
-    text-dx: 5;
+    text-placement-type: simple;
+    text-placements: 'SE';
     text-dy: -5;
     point-file: url(img/icon/dot_white_thick_small.svg);
-    /*point-width: 7;*/
-    point-opacity: @city_marker_opacity;
+    point-transform: scale(0.5, 0.5);
+    point-allow-overlap: true;
+    marker-opacity: @city_marker_opacity;
   }
+
 }
 
 #place::city_label[type='city'][zoom>=9][zoom<=15] {
