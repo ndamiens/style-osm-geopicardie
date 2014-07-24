@@ -125,9 +125,11 @@ Map {
 @city_text:         #222;
 @city_halo:         @place_halo;
 @city_marker_opacity: 1.00;
+@city_text_size:    12;
 
 @town_text:         #222;
 @town_halo:         @place_halo;
+@town_text_size:    11;
 
 /*BCR @road_text:         #555;*/
 @road_text:         #777;

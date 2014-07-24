@@ -24,7 +24,7 @@
   [SCALERANK<=3][zoom=8] {
     text-name: '[NAME]';
     text-face-name: @sans_bold;
-    text-size: 10;
+    text-size: @city_text_size+2;
     text-placement: point;
     text-fill: @city_text;
     text-halo-fill: @city_halo;
@@ -43,7 +43,7 @@
       text-transform: uppercase;
     }
     [zoom<4] {
-      text-size: 9;
+      text-size: @city_text_size;
       text-dx: 5;
       text-dy: -5;
       marker-file: url(img/icon/dot_white_thick_small.svg);
@@ -57,7 +57,7 @@
   [SCALERANK>3][SCALERANK<=9][zoom=8] {
     text-name: '[NAME]';
     text-face-name: @sans_bold;
-    text-size: 9;
+    text-size: @city_text_size;
     text-placement: point;
     text-fill: @city_text;
     text-halo-fill: @city_halo;
@@ -87,37 +87,37 @@
   text-halo-radius: 2;
   text-min-distance: 40;
   [zoom=9] {
-    text-size:11;
+    text-size:@city_text_size+2;
     text-character-spacing: 2;
     text-transform: uppercase;
   }
   [zoom=10] {
-    text-size:12;
+    text-size:@city_text_size+3;
     text-character-spacing: 2;
     text-transform: uppercase;
   }
   [zoom=11] {
-    text-size:12;
+    text-size:@city_text_size+3;
     text-character-spacing: 2;
     text-transform: uppercase;
   }
   [zoom=12] {
-    text-size:12;
+    text-size:@city_text_size+3;
     text-character-spacing: 2;
     text-transform: uppercase;
   }
   [zoom=13] {
-    text-size:13;
+    text-size:@city_text_size+4;
     text-character-spacing: 3;
     text-transform: uppercase;
   }
   [zoom=14] {
-    text-size:14;
+    text-size:@city_text_size+5;
     text-character-spacing: 5;
     text-transform: uppercase;
   }
   [zoom=15] {
-    text-size:14;
+    text-size:@city_text_size+5;
     text-character-spacing: 5;
     text-transform: uppercase;
   }
@@ -142,12 +142,12 @@
     text-dy: -7;
     
     [zoom>=9]{
-      text-size: 9;
+      text-size: @town_text_size;
       text-character-spacing: 2;
       text-fill: @town_text;
     }
     [zoom>=10]{
-      text-size:10;
+      text-size: @town_text_size+1;
     }
   }
     
@@ -156,7 +156,7 @@
     text-face-name: @sans_bold;
     text-placement: point;
     text-fill: @town_text;
-    text-size: 11;
+    text-size: @town_text_size+2;
     text-character-spacing: 2;
     text-halo-fill: @town_halo;
     text-halo-radius: 2;
@@ -168,7 +168,7 @@
       text-character-spacing: 2;
     }
     [zoom>=14]{
-      text-size:12;
+      text-size: @town_text_size+3;
       text-character-spacing: 2;
     }
   }
@@ -193,12 +193,12 @@
     text-dy: -7;
     
     [zoom>=10]{
-      text-size: 9;
+      text-size: @town_text_size;
       text-character-spacing: 1.5;
       text-fill: lighten(@town_text, 10%);
     }
     [zoom>=12]{
-      text-size:10;
+      text-size: @town_text_size+1;
       text-character-spacing: 2;
       text-fill: @town_text;
     }
@@ -259,7 +259,7 @@
   text-face-name:@sans;
   text-placement:point;
   text-fill:lighten(@town_text,25%);
-  text-size:9;
+  text-size:@town_text_size;
   text-halo-fill:lighten(@town_halo,25%);
   text-halo-radius:2;
   text-wrap-width: 50;
