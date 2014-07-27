@@ -1,5 +1,6 @@
-DROP TABLE if exists osm_areas_for_labels;
+-- Table: osm_areas_for_labels
 
+DROP TABLE if exists osm_areas_for_labels;
 
 -- Création des tables
 CREATE TABLE osm_areas_for_labels
@@ -13,6 +14,13 @@ CREATE TABLE osm_areas_for_labels
 WITH (
   OIDS=FALSE
 );
+
+-- Création de l'index sur la géométrie
+CREATE INDEX osm_areas_for_labels_geom
+  ON osm_areas_for_labels
+  USING gist
+  (geometry );
+ALTER TABLE osm_areas_for_labels CLUSTER ON osm_areas_for_labels_geom;
 
 -- Alimentation de la table osm_areas_for_labels à partir de la table osm_landusages
 INSERT INTO osm_areas_for_labels (
@@ -38,6 +46,7 @@ WHERE
 ;
 
 -- Alimentation de la table osm_areas_for_labels à partir de la table osm_buildings
+-- Cas 1 : bâtiments ayant un nom et avec une géométrie simple
 INSERT INTO osm_areas_for_labels (
     type,
     name,
@@ -50,6 +59,7 @@ WHERE name IS NOT NULL AND name != ''
     AND ST_NumInteriorRings(geometry) = 0
 ;
 
+-- Cas 2 : bâtiments ayant un nom, avec une seule géométrie mais avec des trous
 INSERT INTO osm_areas_for_labels (
     type,
     name,
@@ -62,7 +72,7 @@ WHERE name IS NOT NULL AND name != ''
     AND ST_NumInteriorRings(geometry) > 0
 ;
 
--- Gros problème pour les noms très courants -> très gros polygones !
+-- Cas 3 : bâtiments ayant un nom, avec plusieurs géométries
 INSERT INTO osm_areas_for_labels (
     type,
     name,
@@ -73,5 +83,3 @@ FROM osm_buildings
 WHERE name IS NOT NULL AND name != ''
     AND ST_NumGeometries(geometry) > 1
 ;
-
-

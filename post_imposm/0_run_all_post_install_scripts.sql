@@ -8,3 +8,17 @@
 \i add_table_osm_roads_for_labels.sql
 \i add_table_osm_waterways_for_labels.sql
 \i add_table_osm_areas_for_labels.sql
+\i clean_geom_osm_buildings.sql
+\i clean_geom_osm_landusages.sql
+\i clean_geom_osm_landusages_gen0.sql
+\i clean_geom_osm_landusages_gen1.sql
+\i clean_geom_osm_mainroads_gen0.sql
+\i clean_geom_osm_mainroads_gen1.sql
+\i clean_geom_osm_motorways_gen0.sql
+\i clean_geom_osm_motorways_gen1.sql
+\i clean_geom_osm_railways_gen0.sql
+\i clean_geom_osm_railways_gen1.sql
+\i clean_geom_osm_waterareas.sql
+\i clean_geom_osm_waterareas_gen0.sql
+\i clean_geom_osm_waterareas_gen1.sql
+\i create_osm_roads_views.sql

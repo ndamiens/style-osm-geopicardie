@@ -6,7 +6,7 @@ DROP TABLE if exists osm_roads_n_railways_gen0;
 CREATE TABLE osm_roads_n_railways_gen0
 (
   osm_id integer NOT NULL,
-  class character varying(15),
+  class character varying(255),
   type character varying(255),
   name character varying(255),
   tunnel smallint,
@@ -19,14 +19,21 @@ CREATE TABLE osm_roads_n_railways_gen0
   access character varying(255),
   service character varying(255),
   usage character varying(255),
-  geometry geometry(LineString,900913),
-  CONSTRAINT osm_roads_n_railways_gen0_pkey PRIMARY KEY (osm_id)
+  geometry geometry(LineString,900913)
+  --Suppression de la clé primaire car plusieurs objets de cette
+  --doivent pouvoir avoir le même osm_id (à vérifier)
+  --CONSTRAINT osm_roads_n_railways_gen0_pkey PRIMARY KEY (osm_id)
 )
 WITH (
   OIDS=FALSE
 );
 
--- Création des index
+-- Index: osm_roads_n_railways_gen0_geom
+CREATE INDEX osm_roads_n_railways_gen0_geom
+  ON osm_roads_n_railways_gen0
+  USING gist
+  (geometry );
+ALTER TABLE osm_roads_n_railways_gen0 CLUSTER ON osm_roads_n_railways_gen0_geom;
 
 -- Alimentation de la table osm_roads_n_railways_gen0 à partir de la table osm_motorways
 INSERT INTO osm_roads_n_railways_gen0 (
@@ -117,5 +124,3 @@ SELECT
     usage,
     z_order,
     geometry FROM osm_railways_gen0;
-
-
