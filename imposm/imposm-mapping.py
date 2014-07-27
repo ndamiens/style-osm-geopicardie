@@ -589,3 +589,17 @@ roads_gen0 = UnionView(
     ),
     mappings = [railways_gen0, mainroads_gen0, motorways_gen0],
 )
+
+power = Points(
+	name = 'power_generators',
+	mapping = {
+		'power': (
+			'generator',
+		)
+	},
+	fields = (
+		('source',String()),
+	)
+)
+
+
