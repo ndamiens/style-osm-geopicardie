@@ -7,7 +7,7 @@ DROP TABLE if exists osm_roads_for_labels_int_ref;
 -- Création des tables
 CREATE TABLE osm_roads_for_labels_name
 (
-  class character varying(15),
+  class character varying(255),
   type character varying(255),
   name character varying(255),
   geometry geometry(LineString,900913)
@@ -18,7 +18,7 @@ WITH (
 
 CREATE TABLE osm_roads_for_labels_ref
 (
-  class character varying(15),
+  class character varying(255),
   type character varying(255),
   ref character varying(255),
   geometry geometry(LineString,900913)
@@ -29,7 +29,7 @@ WITH (
 
 CREATE TABLE osm_roads_for_labels_int_ref
 (
-  class character varying(15),
+  class character varying(255),
   type character varying(255),
   int_ref character varying(255),
   geometry geometry(LineString,900913)
@@ -39,6 +39,23 @@ WITH (
 );
 
 -- Création des index
+CREATE INDEX osm_roads_for_labels_name_geom
+  ON osm_roads_for_labels_name
+  USING gist
+  (geometry );
+ALTER TABLE osm_roads_for_labels_name CLUSTER ON osm_roads_for_labels_name_geom;
+
+CREATE INDEX osm_roads_for_labels_ref_geom
+  ON osm_roads_for_labels_ref
+  USING gist
+  (geometry );
+ALTER TABLE osm_roads_for_labels_ref CLUSTER ON osm_roads_for_labels_ref_geom;
+
+CREATE INDEX osm_roads_for_labels_int_ref_geom
+  ON osm_roads_for_labels_int_ref
+  USING gist
+  (geometry );
+ALTER TABLE osm_roads_for_labels_int_ref CLUSTER ON osm_roads_for_labels_int_ref_geom;
 
 -- Alimentation de la table osm_roads_for_labels_name à partir de la table osm_roads_n_railways
 INSERT INTO osm_roads_for_labels_name (
@@ -64,6 +81,7 @@ WHERE
 	t1.name = t2.name
 ;
 
+-- Alimentation de la table osm_roads_for_labels_ref à partir de la table osm_roads_n_railways
 INSERT INTO osm_roads_for_labels_ref (
     class,
     type,
@@ -88,9 +106,8 @@ WHERE
 ;
 
 
-
 -- Alimentation de la table osm_roads_for_labels_int_ref à partir de la table osm_roads_n_railways
-INSERT INTO osm_roads_for_labels_ref (
+INSERT INTO osm_roads_for_labels_int_ref (
     class,
     type,
     ref,

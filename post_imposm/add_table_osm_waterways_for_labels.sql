@@ -5,7 +5,7 @@ DROP TABLE if exists osm_waterways_for_labels;
 -- Création des tables
 CREATE TABLE osm_waterways_for_labels
 (
-  class character varying(15),
+  class character varying(255),
   type character varying(255),
   name character varying(255),
   geometry geometry(LineString,900913)
@@ -16,6 +16,11 @@ WITH (
 
 
 -- Création des index
+CREATE INDEX osm_waterways_for_labels_geom
+  ON osm_waterways_for_labels
+  USING gist
+  (geometry );
+ALTER TABLE osm_waterways_for_labels CLUSTER ON osm_waterways_for_labels_geom;
 
 -- Alimentation de la table osm_roads_for_labels_name à partir de la table osm_waterways
 INSERT INTO osm_waterways_for_labels (
