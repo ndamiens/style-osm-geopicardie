@@ -13,8 +13,6 @@ CREATE TABLE osm_areas_for_labels
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE osm_areas_for_labels
-  OWNER TO "user";
 
 -- Alimentation de la table osm_areas_for_labels à partir de la table osm_landusages
 INSERT INTO osm_areas_for_labels (
