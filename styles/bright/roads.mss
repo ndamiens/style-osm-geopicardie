@@ -614,3 +614,12 @@ come in as well.
 }
 
 /******************************************************************* */
+
+
+
+#oneway_roads[zoom>10] {
+	[type="residential"],[type="secondary"],[type="unclassified"] {
+		marker-file: url(img/icon/oneway.svg);
+		marker-line-width: 1;
+	}
+}
