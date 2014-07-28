@@ -41,6 +41,7 @@ imposm.config.relation_builder = 'contains'
 
 # # You can prefer a language other than the data's local language
 # set_default_name_type(LocalizedName(['name:en', 'int_name', 'name']))
+set_default_name_type(LocalizedName(['name:fr', 'name', 'int_name']))
 
 db_conf = Options(
     # db='osm',
@@ -114,19 +115,6 @@ admin = Polygons(
     ),
 )
 
-# gpic test
-admin_boundaries = LineStrings(
-    name = 'admin_boundaries',
-    fields = (
-        ('border_type', String()),
-        ('admin_level', Integer()),
-    ),
-    mapping = {
-        'boundary': (
-            'administrative',
-    )}
-)
-
 motorways = Highway(
     name = 'motorways',
     mapping = {
@@ -161,10 +149,6 @@ buildings = Polygons(
         'building': (
             '__any__',
         ),
-# gpic
-#        'railway': (
-#            'station',
-#        ),
         'aeroway': (
             'terminal',
         ),
@@ -217,8 +201,6 @@ transport_points = Points(
     )}
 )
 
-# gpic
-# access, service and usage tags
 railways = LineStrings(
     name = 'railways',
     fields = (
@@ -247,12 +229,6 @@ railways = LineStrings(
 waterways = LineStrings(
     name = 'waterways',
     mapping = {
-# gpic
-# should we keep ditches?
-# layers, boat tags
-        'barrier': (
-            'ditch',
-        ),
         'waterway': (
             'stream',
             'river',
@@ -265,8 +241,6 @@ waterways = LineStrings(
         ('boat', String()),
         ('layer', Integer()),
     ),
-# gpic
-# what for?
     field_filter = (
         ('tunnel', Bool()),
     ),
@@ -275,7 +249,6 @@ waterways = LineStrings(
 waterareas = Polygons(
     name = 'waterareas',
     fields = (
-# gpic
         ('boat', String()),
         ('area', PseudoArea()),
     ),
@@ -536,7 +509,7 @@ waterareas_gen1 = GeneralizedTable(
 )
 
 # gpic
-# tags: int_ref, usage and service
+# tags: int_ref : we need to manage relation for ref and int_ref
 roads = UnionView(
     name = 'roads',
     fields = (
@@ -555,7 +528,7 @@ roads = UnionView(
 )
 
 # gpic
-# tags: int_ref, usage and service
+# tags: int_ref : we need to manage relation for ref and int_ref
 roads_gen1 = UnionView(
     name = 'roads_gen1',
     fields = (
@@ -573,7 +546,7 @@ roads_gen1 = UnionView(
 )
 
 # gpic
-# tags: int_ref, usage and service
+# tags: int_ref : we need to manage relation for ref and int_ref
 roads_gen0 = UnionView(
     name = 'roads_gen0',
     fields = (
@@ -588,4 +561,43 @@ roads_gen0 = UnionView(
         ('usage', None),
     ),
     mappings = [railways_gen0, mainroads_gen0, motorways_gen0],
+)
+
+windturbines = Points(
+    name = 'windturbines',
+    mapping = {
+        'generator:source': (
+            'wind',
+         ),
+    },
+    fields = (
+        ('power', String()),
+        ('generator:type', String()),
+    ),
+)
+
+powerlines = LineStrings(
+    name = 'powerlines',
+    mapping = {
+        'power': (
+            'line', 'minor_line',
+        ),
+    },
+    fields = (
+        ('cables', Integer()),
+        ('wires', String()),
+        ('voltage', Integer()),
+    ),
+)
+
+powerpoles = Points(
+    name = 'powerpoles',
+    mapping = {
+        'power': (
+            'pole', 'tower',
+        ),
+    },
+    fields = (
+        ('height', Integer()),
+    ),
 )
