@@ -67,10 +67,6 @@ UNION ALL
             'railways'::text AS class
            FROM osm_railways;
 
-ALTER TABLE osm_roads
-  OWNER TO "user";
-
-
 
 CREATE OR REPLACE VIEW osm_roads_gen0 AS 
         (         SELECT osm_railways_gen0.osm_id,
@@ -121,8 +117,6 @@ UNION ALL
             'motorways_gen1'::text AS class
            FROM osm_motorways_gen0;
 
-ALTER TABLE osm_roads_gen0
-  OWNER TO "user";
 
 CREATE OR REPLACE VIEW osm_roads_gen1 AS 
         (         SELECT osm_railways_gen1.osm_id,
@@ -172,6 +166,3 @@ UNION ALL
             NULL::character varying AS usage,
             'motorways'::text AS class
            FROM osm_motorways_gen1;
-
-ALTER TABLE osm_roads_gen1
-  OWNER TO "user";
