@@ -1,3 +1,7 @@
 intermediaire.xml
 mapnik.xml
 Thumbs.db
+imposm/*.cache
+*.swp
+*.swo
+*.osm.bz2
