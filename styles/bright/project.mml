@@ -93,7 +93,8 @@
         "table": "( SELECT geometry, type, area\n  FROM osm_landusages_gen0 where geometry && !bbox! \n  ORDER BY area DESC\n) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "polygon",
@@ -113,7 +114,8 @@
         "table": "( SELECT geometry, type, area\n  FROM osm_landusages_gen1 where geometry && !bbox! ORDER BY area DESC\n) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "polygon",
@@ -133,7 +135,8 @@
         "table": "( SELECT geometry, type, area FROM osm_landusages where geometry && !bbox! ORDER BY area DESC) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "polygon",
@@ -153,7 +156,8 @@
         "table": "( SELECT geometry, type FROM osm_waterways WHERE type IN ('river', 'canal') and geometry && !bbox!) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "linestring",
@@ -173,7 +177,8 @@
         "user": "user",
         "password": "user",
         "id": "waterway_med",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "linestring",
@@ -193,7 +198,8 @@
         "user": "user",
         "password": "user",
         "id": "waterway_high",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "linestring",
@@ -213,7 +219,8 @@
         "table": "( SELECT geometry FROM osm_waterareas WHERE geometry && !bbox! and area > 10000) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "polygon",
@@ -233,7 +240,8 @@
         "table": "( SELECT geometry FROM osm_waterareas WHERE area > 1000 and geometry && !bbox!) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "polygon",
@@ -253,7 +261,8 @@
         "table": "( SELECT geometry FROM osm_waterareas where geometry && !bbox!) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "polygon",
@@ -271,7 +280,8 @@
         "table": "( SELECT geometry, type, name, area FROM osm_buildings WHERE type != 'roof' and geometry && !bbox! ORDER BY ST_YMin(ST_Envelope(geometry)) DESC\n) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "polygon",
@@ -291,7 +301,8 @@
         "table": "( SELECT geometry, type FROM osm_aeroways WHERE geometry && !bbox!) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "linestring",
@@ -310,7 +321,8 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "extent_cache": "auto"
+        "extent_cache": "auto",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "linestring",
@@ -335,7 +347,8 @@
         "table": "( SELECT geometry FROM osm_transport_points  WHERE type = 'turning_circle' and geometry && !bbox!) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "point",
@@ -353,7 +366,8 @@
         "table": "( SELECT geometry FROM osm_landusages WHERE type = 'pedestrian' and geometry && !bbox!) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "polygon",
@@ -375,7 +389,8 @@
         "user": "user",
         "password": "user",
         "extent_cache": "auto",
-        "project": "geopicardie_topo"
+        "project": "geopicardie_topo",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "linestring",
@@ -402,7 +417,8 @@
         "user": "user",
         "password": "user",
         "id": "roads_med",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "linestring",
@@ -420,7 +436,8 @@
         "table": "( SELECT geometry, type FROM osm_roads_gen0 WHERE geometry && !bbox!) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "linestring",
@@ -438,7 +455,8 @@
         "table": "( SELECT geometry FROM osm_landusages WHERE type = 'pedestrian' and geometry && !bbox!) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "polygon",
@@ -456,7 +474,8 @@
         "table": "( SELECT geometry FROM osm_transport_points WHERE type = 'turning_circle' and geometry && !bbox!) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "point",
@@ -477,7 +496,8 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "extent_cache": "auto"
+        "extent_cache": "auto",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "linestring",
@@ -502,7 +522,8 @@
         "table": "(select geometry, type,\n\tCASE\n\t\tWHEN type IN ('toll_booth', 'stile', 'gate', 'horse_stile','lift_gate', 'kissing_gate','cattle_grid','entrance') THEN 'gate'\n\t\tWHEN type IN ('block', 'bollard', 'chain', 'cycle_barrier', 'spikes', 'fence', 'wire_fence','yes') THEN 'divider'\n\tEND AS stylegroup\nFROM osm_barrierpoints where geometry && !bbox!) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "point",
@@ -522,7 +543,8 @@
         "table": "(SELECT geometry, type,\n\tCASE \n\t\tWHEN type IN ('city_wall', 'fence', 'retaining_wall', 'wall', 'wire_fence', 'yes') THEN 'fence'\n\t\tWHEN type IN ('gate', 'spikes', 'bollard', 'lift_gate', 'kissing_gate') THEN 'gate'\n\t\tWHEN type IN ('hedge') THEN 'hedge'\n\tEND AS stylegroup\nFROM osm_barrierways where geometry && !bbox!) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "linestring",
@@ -540,7 +562,8 @@
         "table": "( SELECT geometry, type, name, area FROM osm_buildings WHERE type = 'roof' and geometry && !bbox! ORDER BY ST_YMin(ST_Envelope(geometry)) DESC\n) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "polygon",
@@ -581,7 +604,8 @@
         "table": "( SELECT geometry, type, name, z_order, population\n  FROM osm_places\n  ORDER BY z_order, population DESC NULLS LAST\n) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "point",
@@ -603,7 +627,8 @@
         "user": "user",
         "password": "user",
         "extent_cache": "auto",
-        "project": "geopicardie_topo_12"
+        "project": "geopicardie_topo_12",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "point",
@@ -625,7 +650,8 @@
         "user": "user",
         "password": "user",
         "extent_cache": "auto",
-        "extent": "7349.59481127445,6027408.8355078,731182.322849574,6716105.79236794"
+        "extent": "7349.59481127445,6027408.8355078,731182.322849574,6716105.79236794",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "linestring",
@@ -653,7 +679,8 @@
         "user": "user",
         "password": "user",
         "extent_cache": "auto",
-        "extent": "7349.59481127445,6027408.8355078,731182.322849574,6716105.79236794"
+        "extent": "7349.59481127445,6027408.8355078,731182.322849574,6716105.79236794",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "linestring",
@@ -680,7 +707,8 @@
         "table": "( SELECT geometry, type, name\n  FROM osm_waterways_for_labels\n  WHERE geometry && !bbox! and type IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "linestring",
@@ -700,7 +728,8 @@
         "table": "( SELECT geometry,type FROM osm_roads  WHERE geometry && !bbox! and oneway=1) AS data",
         "type": "postgis",
         "user": "user",
-        "password": "user"
+        "password": "user",
+	"srid": "900913"
       },
       "class": "",
       "geometry": "linestring",
