@@ -1,4 +1,10 @@
-CREATE OR REPLACE VIEW osm_roads AS 
+-- Table: osm_roads_xx
+
+DROP TABLE if exists osm_roads;
+DROP TABLE if exists osm_roads_gen0;
+DROP TABLE if exists osm_roads_gen1;
+
+CREATE TABLE osm_roads AS 
         (        (         SELECT osm_motorways.osm_id,
                             osm_motorways.type,
                             osm_motorways.geometry::geometry(LineString, 900913) AS geometry,
@@ -67,8 +73,12 @@ UNION ALL
             'railways'::text AS class
            FROM osm_railways;
 
+CREATE INDEX osm_road_idx_geom ON osm_roads using gist (geometry);
+CREATE INDEX osm_road_idx_name ON osm_roads (name);
+CREATE INDEX osm_road_idx_ref ON osm_roads (ref);
 
-CREATE OR REPLACE VIEW osm_roads_gen0 AS 
+
+CREATE TABLE osm_roads_gen0 AS 
         (         SELECT osm_railways_gen0.osm_id,
                     osm_railways_gen0.type,
                     osm_railways_gen0.geometry::geometry(LineString, 900913) AS geometry,
@@ -117,8 +127,12 @@ UNION ALL
             'motorways_gen1'::text AS class
            FROM osm_motorways_gen0;
 
+CREATE INDEX osm_road_gen0_idx_geom ON osm_roads_gen0 using gist (geometry);
+CREATE INDEX osm_road_gen0_idx_name ON osm_roads_gen0 (name);
+CREATE INDEX osm_road_gen0_idx_ref ON osm_roads_gen0 (ref);
 
-CREATE OR REPLACE VIEW osm_roads_gen1 AS 
+
+CREATE TABLE osm_roads_gen1 AS 
         (         SELECT osm_railways_gen1.osm_id,
                     osm_railways_gen1.type,
                     osm_railways_gen1.geometry::geometry(LineString, 900913) AS geometry,
@@ -166,3 +180,7 @@ UNION ALL
             NULL::character varying AS usage,
             'motorways'::text AS class
            FROM osm_motorways_gen1;
+
+CREATE INDEX osm_road_gen1_idx_geom ON osm_roads_gen1 using gist (geometry);
+CREATE INDEX osm_road_gen1_idx_name ON osm_roads_gen1 (name);
+CREATE INDEX osm_road_gen1_idx_ref ON osm_roads_gen1 (ref);

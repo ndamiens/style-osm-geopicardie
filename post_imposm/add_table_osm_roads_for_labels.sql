@@ -110,7 +110,7 @@ WHERE
 INSERT INTO osm_roads_for_labels_int_ref (
     class,
     type,
-    ref,
+    int_ref,
     geometry)
 SELECT t1.class, t1.type, t1.int_ref, t2.geometry
 FROM
