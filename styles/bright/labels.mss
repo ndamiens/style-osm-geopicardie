@@ -479,4 +479,20 @@
 }
 
 
+/* ================================================================== */
+/* ONE-WAY ARROWS
+/* ================================================================== */
+
+#oneway_roads[zoom>=17] {
+  [type="residential"],[type="secondary"],[type="unclassified"] {
+    marker-line-width: 1;
+    marker-placement:line;
+    marker-max-error: 0.5;
+    marker-spacing: 200;
+    marker-file: url(img/icon/oneway.svg);
+    [oneway=-1] { marker-file: url(img/icon/oneway-reverse.svg); }
+  }
+}
+
+
 /* ****************************************************************** */
