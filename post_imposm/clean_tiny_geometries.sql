@@ -10,4 +10,11 @@ DELETE FROM osm_mainroads_gen1 WHERE st_length(geometry) = 0;
 DELETE FROM osm_railways_gen0 WHERE st_length(geometry) = 0;
 DELETE FROM osm_railways_gen1 WHERE st_length(geometry) = 0;
 
+DELETE FROM osm_mainroads_gen0 WHERE ST_NPoints(geometry) = 3 AND ST_StartPoint(geometry) = ST_EndPoint(geometry);
+DELETE FROM osm_mainroads_gen1 WHERE ST_NPoints(geometry) = 3 AND ST_StartPoint(geometry) = ST_EndPoint(geometry);
+DELETE FROM osm_motorways_gen0 WHERE ST_NPoints(geometry) = 3 AND ST_StartPoint(geometry) = ST_EndPoint(geometry);
+DELETE FROM osm_motorways_gen1 WHERE ST_NPoints(geometry) = 3 AND ST_StartPoint(geometry) = ST_EndPoint(geometry);
+DELETE FROM osm_railways_gen0 WHERE ST_NPoints(geometry) = 3 AND ST_StartPoint(geometry) = ST_EndPoint(geometry);
+DELETE FROM osm_railways_gen1 WHERE ST_NPoints(geometry) = 3 AND ST_StartPoint(geometry) = ST_EndPoint(geometry);
+
 commit;
