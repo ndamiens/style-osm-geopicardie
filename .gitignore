@@ -5,6 +5,7 @@ imposm/*.cache
 *.swp
 *.swo
 *.osm.bz2
+styles/*/.thumb.png
 styles/bright/layers/*
 !styles/bright/layers/insert natural earth shapefiles here.txt
 styles/bright/fonts/*
