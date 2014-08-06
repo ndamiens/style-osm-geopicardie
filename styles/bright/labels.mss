@@ -35,10 +35,11 @@
     text-allow-overlap: false;
     text-min-padding: 0;
     text-placements: 'NE,NW,N,E,SE,W,SW,S';
-    text-dy: -7;
+    text-dx: 5;
+    text-dy: -5;
     point-file: url(img/icon/dot_white_thick.svg);
     point-transform: scale(0.18,0.18);
-    point-allow-overlap: true;
+    point-allow-overlap: false;
     [zoom>4] {
       text-transform: uppercase;
     }
@@ -46,8 +47,8 @@
       text-size: @city_text_size;
       text-dx: 5;
       text-dy: -5;
-      marker-file: url(img/icon/dot_white_thick_small.svg);
-      marker-width: 7;
+      point-file: url(img/icon/dot_white_thick.svg);
+      point-transform: scale(0.14,0.14);
     }
   }
 
@@ -68,11 +69,12 @@
     text-allow-overlap: false;
     text-min-padding: 0;
     text-placement-type: simple;
-    text-placements: 'SE';
+    text-placements: 'NE,NW,N,E,SE,W,SW,S';
+    text-dx: 5;
     text-dy: -5;
-    point-file: url(img/icon/dot_white_thick_small.svg);
-    point-transform: scale(0.5, 0.5);
-    point-allow-overlap: true;
+    point-file: url(img/icon/dot_white_thick.svg);
+    point-transform: scale(0.14,0.14);
+    point-allow-overlap: false;
     marker-opacity: @city_marker_opacity;
   }
 
