@@ -431,6 +431,10 @@ come in as well.
           }
         }
       }
+      [type='subway'][tunnel=0] {
+        line-width: 0.7;
+        line-opacity: 0.75;
+      }
     }
   }
   [zoom=15] {
@@ -468,6 +472,10 @@ come in as well.
           line-opacity: 0.9;
         }
       }
+      [type='subway'][tunnel=0] {
+        line-width: 0.8;
+        line-opacity: 0.9;
+      }
     }
   }
   [zoom=17] {
@@ -500,6 +508,10 @@ come in as well.
           line-width: 1.2;
           line-opacity: 1;
         }
+      }
+      [type='subway'][tunnel=0] {
+        line-width: 1.2;
+        line-opacity: 1;
       }
     }
   }
