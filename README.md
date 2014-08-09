@@ -17,9 +17,15 @@ Outils utilisés :
 * MapProxy
 
 
-Styles planifiés :
+Styles existants :
 * bright : fond cartographique contrasté
-...
+
+Styles planifiés :
+* fade : fond cartographique en demi-teintes
+* grey : fond cartographique en niveaux de gris
+* admin : limites administratives
+* overhead : lignes électriques et éoliennes
+* overlay : toponymes et réseau routier/ferré
 
 
 Projections supportées :
