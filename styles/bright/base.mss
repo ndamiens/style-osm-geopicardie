@@ -166,7 +166,7 @@
   
   [type='wetland'][zoom>=12] {
     polygon-fill: @grass;
-    /* polygon-pattern-file: url(img/pattern/marsh-16.png); */
+    polygon-pattern-file: url(img/pattern/marsh-16.png);
     line-width: 0.5;
     line-color: @grass;
   }
