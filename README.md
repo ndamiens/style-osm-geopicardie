@@ -34,4 +34,4 @@ Projections supportées :
 
 
 Les fichiers de styles élaborés pour ce projet ont été largement inspirés par 
-projet OSM-Bright.
+le projet OSM-Bright.
