@@ -77,12 +77,12 @@ Map {
 @standard_line:     #999;
 @standard_fill:     #fff;
 @standard_case:     @standard_line;
-@standard_tunnel_fill: #fcfcfb;
+@standard_tunnel_fill: #fcfcfc;
 
-@motorway_line:     #813865;
-@motorway_fill:     #ffe8f6;
-@motorway_case:     #813865;
-@motorway_tunnel_fill: #ffe8f6;
+@motorway_line:     #B25968;
+@motorway_fill:     lighten(@motorway_line, 46%);
+@motorway_case:     @motorway_line;
+@motorway_tunnel_fill: @motorway_fill;
 
 @trunk_line:        @motorway_line;
 @trunk_fill:        @motorway_fill;
