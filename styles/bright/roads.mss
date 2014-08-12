@@ -2,40 +2,47 @@
    ROAD & RAIL LINES
 /* ================================================================== */
 
-/* At lower zoomlevels, just show major automobile routes: motorways
-and trunks. */
-#roads_low[zoom>=7][zoom<=8] {
-  [zoom=7] {
-    ::outline {
-      [type='motorway'] {
-        line-color: lighten(@motorway_line, 25%);
-        line-width: 2.25;
-      }
-    }
+#roads_low::outline[zoom>=6][zoom<=8] {
+  [zoom=6] {
     [type='motorway'] {
-      line-width: 0.45;
+      line-width: 0.6;
+      line-color: lighten(@motorway_line, 20%);
+    }
+  }
+  [zoom=7] {
+    [type='motorway'] {
+      line-width: 1.1;
+      line-color: lighten(@motorway_line, 30%);
+    }
+  }
+  [zoom=8] {
+    [type='motorway'] {
+      line-width: 2.75;
+      line-color: lighten(@motorway_line, 25%);
+    }
+  }
+}
+
+#roads_low[zoom>=6][zoom<=8] {
+  [zoom=6] {
+    [type='motorway'] {
+      line-width: 0.0;
+      line-color: #fff;
+    }
+  }
+  [zoom=7] {
+    [type='motorway'] {
+      line-width: 0.0;
       line-color: #fff;
     }
   }
   [zoom=8] {
-    ::outline {
-      [type='motorway'] {
-        line-color: lighten(@motorway_line, 15%);
-        line-width: 2.75;
-      }
-      [type='trunk'] {
-        line-color: lighten(@trunk_line, 25%);
-        line-width: 2.75;
-      }
-    }
-    [type='motorway'],
-    [type='trunk'] {
+    [type='motorway'] {
       line-width: 0.65;
       line-color: #fff;
     }
   }
 }
-
 
 /* At mid-level scales start to show primary and secondary routes
 as well. */
