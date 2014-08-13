@@ -61,7 +61,6 @@ class Highway(LineStrings):
         ('bridge', Bool()),
         ('oneway', Direction()),
         ('ref', String()),
-        ('layer', Integer()),
         ('z_order', WayZOrder()),
         ('access', String()),
         ('int_ref', String()),
@@ -100,18 +99,6 @@ places = Points(
             'locality',
         ])),
         ('population', Integer()),
-    ),
-)
-
-admin = Polygons(
-    name = 'admin',
-    mapping = {
-        'boundary': (
-            'administrative',
-        ),
-    },
-    fields = (
-        ('admin_level', OneOfInt('1 2 3 4 5 6'.split())),
     ),
 )
 
@@ -206,10 +193,8 @@ railways = LineStrings(
     fields = (
         ('tunnel', Bool()),
         ('bridge', Bool()),
-        # ('ref', String()),
-        ('layer', Integer()),
         ('z_order', WayZOrder()),
-        # ('access', String()),
+        ('access', String()),
         ('service', String()),
         ('usage', String()),
     ),
@@ -223,6 +208,9 @@ railways = LineStrings(
             'preserved',
             'funicular',
             'monorail',
+            'disused',
+            'abandoned',
+            'construction',
     )}
 )
 
@@ -343,6 +331,7 @@ landusages = Polygons(
             'school',
             'college',
             'library',
+            'baracks,'
             'fuel',
             'parking',
             'nature_reserve',
@@ -351,6 +340,8 @@ landusages = Polygons(
             'place_of_worship',
             'hospital',
             'scrub',
+            'orchard',
+            'vineyard',
             'zoo',
             'quarry',
             'residential',
@@ -358,6 +349,7 @@ landusages = Polygons(
             'commercial',
             'industrial',
             'railway',
+            'heath',
             'island',
             'land',
         ])),
@@ -376,6 +368,8 @@ landusages = Polygons(
             'farmyard',
             'farm',
             'farmland',
+            'orchard',
+            'vineyard',
             'wood',
             'meadow',
             'village_green',
@@ -399,6 +393,10 @@ landusages = Polygons(
             'land',
             'scrub',
             'wetland',
+            'heath',
+        ),
+        'man_made': (
+            'pier',
         ),
         'highway': (
             'pedestrian',
@@ -422,7 +420,15 @@ landusages = Polygons(
         'tourism': (
             'zoo',
         ),
+        'barrier': (
+            'hedge',
+        ),
+        'military': (
+            'barracks',
+        ),
         'aeroway': (
+            'runway',
+            'taxiway',
             'aerodrome',
             'helipad',
             'apron',
@@ -506,61 +512,6 @@ waterareas_gen1 = GeneralizedTable(
     tolerance = meter_to_mapunit(50.0),
     origin = waterareas,
     where = "ST_Area(geometry)>%f" % sqr_meter_to_mapunit(50000),
-)
-
-# gpic
-# tags: int_ref : we need to manage relation for ref and int_ref
-roads = UnionView(
-    name = 'roads',
-    fields = (
-        ('ref', None),
-        ('int_ref', None),
-        ('bridge', 0),
-        ('tunnel', 0),
-        ('oneway', 0),
-        ('layer', 0),
-        ('z_order', 0),
-        ('access', None),
-        ('service', None),
-        ('usage', None),
-    ),
-    mappings = [motorways, mainroads, minorroads, railways],
-)
-
-# gpic
-# tags: int_ref : we need to manage relation for ref and int_ref
-roads_gen1 = UnionView(
-    name = 'roads_gen1',
-    fields = (
-        ('ref', None),
-        ('int_ref', None),
-        ('bridge', 0),
-        ('tunnel', 0),
-        ('oneway', 0),
-        ('z_order', 0),
-        ('access', None),
-        ('service', None),
-        ('usage', None),
-    ),
-    mappings = [railways_gen1, mainroads_gen1, motorways_gen1],
-)
-
-# gpic
-# tags: int_ref : we need to manage relation for ref and int_ref
-roads_gen0 = UnionView(
-    name = 'roads_gen0',
-    fields = (
-        ('ref', None),
-        ('int_ref', None),
-        ('bridge', 0),
-        ('tunnel', 0),
-        ('oneway', 0),
-        ('z_order', 0),
-        ('access', None),
-        ('service', None),
-        ('usage', None),
-    ),
-    mappings = [railways_gen0, mainroads_gen0, motorways_gen0],
 )
 
 windturbines = Points(
