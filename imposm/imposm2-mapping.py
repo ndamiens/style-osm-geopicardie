@@ -69,183 +69,29 @@ class Highway(LineStrings):
         ('area', Bool()),
     )
 
-places = Points(
-    name = 'places',
+aeroways = LineStrings(
+    name = 'aeroways',
     mapping = {
-        'place': (
-            'country',
-            'state',
-            'region',
-            'county',
-            'city',
-            'town',
-            'village',
-            'hamlet',
-            'suburb',
-            'locality',
-        ),
-    },
-    fields = (
-        ('z_order', ZOrder([
-            'country',
-            'state',
-            'region',
-            'county',
-            'city',
-            'town',
-            'village',
-            'hamlet',
-            'suburb',
-            'locality',
-        ])),
-        ('population', Integer()),
-    ),
-)
-
-motorways = Highway(
-    name = 'motorways',
-    mapping = {
-        'highway': (
-            'motorway',
-            'motorway_link',
-            'trunk',
-            'trunk_link',
-        ),
-    }
-)
-
-mainroads = Highway(
-    name = 'mainroads',
-    mapping = {
-        'highway': (
-            'primary',
-            'primary_link',
-            'secondary',
-            'secondary_link',
-            'tertiary',
-            'tertiary_link',
-    )}
-)
-
-buildings = Polygons(
-    name = 'buildings',
-    fields = (
-        ('area', PseudoArea()),
-    ),
-    mapping = {
-        'building': (
-            '__any__',
-        ),
         'aeroway': (
-            'terminal',
-        ),
-    }
-)
-
-minorroads = Highway(
-    name = 'minorroads',
-    mapping = {
-        'highway': (
-            'road',
-            'path',
-            'track',
-            'service',
-            'footway',
-            'bridleway',
-            'cycleway',
-            'steps',
-            'pedestrian',
-            'living_street',
-            'unclassified',
-            'residential',
+            'runway',
+            'taxiway',
     )}
 )
 
-transport_points = Points(
-    name = 'transport_points',
-    fields = (
-        ('ref', String()),
-    ),
+amenities = Points(
+    name='amenities',
     mapping = {
-        'highway': (
-            'motorway_junction',
-            'turning_circle',
-            'bus_stop',
+        'amenity': (
+            'university',
+            'school',
+            'library',
+            'fuel',
+            'hospital',
+            'fire_station',
+            'police',
+            'townhall',
         ),
-        'railway': (
-            'station',
-            'halt',
-            'tram_stop',
-            'crossing',
-            'level_crossing',
-            'subway_entrance',
-        ),
-        'aeroway': (
-            'aerodrome',
-            'terminal',
-            'helipad',
-            'gate',
-    )}
-)
-
-railways = LineStrings(
-    name = 'railways',
-    fields = (
-        ('tunnel', Bool()),
-        ('bridge', Bool()),
-        ('z_order', WayZOrder()),
-        ('access', String()),
-        ('service', String()),
-        ('usage', String()),
-    ),
-    mapping = {
-        'railway': (
-            'rail',
-            'tram',
-            'light_rail',
-            'subway',
-            'narrow_gauge',
-            'preserved',
-            'funicular',
-            'monorail',
-            'disused',
-            'abandoned',
-            'construction',
-    )}
-)
-
-waterways = LineStrings(
-    name = 'waterways',
-    mapping = {
-        'waterway': (
-            'stream',
-            'river',
-            'canal',
-            'drain',
-            'ditch',
-        ),
-    },
-    fields = (
-        ('boat', String()),
-        ('layer', Integer()),
-    ),
-    field_filter = (
-        ('tunnel', Bool()),
-    ),
-)
-
-waterareas = Polygons(
-    name = 'waterareas',
-    fields = (
-        ('boat', String()),
-        ('area', PseudoArea()),
-    ),
-    mapping = {
-        'waterway': ('riverbank',),
-        'natural': ('water',),
-        'landuse': ('basin', 'reservoir'), 
-    },
-)
+})
 
 barrierpoints = Points(
     name = 'barrierpoints',
@@ -269,6 +115,7 @@ barrierpoints = Points(
             'stile',
     )}
 )
+
 barrierways = LineStrings(
     name = 'barrierways',
     mapping = {
@@ -289,13 +136,19 @@ barrierways = LineStrings(
     )}
 )
 
-aeroways = LineStrings(
-    name = 'aeroways',
+buildings = Polygons(
+    name = 'buildings',
+    fields = (
+        ('area', PseudoArea()),
+    ),
     mapping = {
+        'building': (
+            '__any__',
+        ),
         'aeroway': (
-            'runway',
-            'taxiway',
-    )}
+            'terminal',
+        ),
+    }
 )
 
 landusages = Polygons(
@@ -435,57 +288,6 @@ landusages = Polygons(
         ),
 })
 
-amenities = Points(
-    name='amenities',
-    mapping = {
-        'amenity': (
-            'university',
-            'school',
-            'library',
-            'fuel',
-            'hospital',
-            'fire_station',
-            'police',
-            'townhall',
-        ),
-})
-
-motorways_gen1 = GeneralizedTable(
-    name = 'motorways_gen1',
-    tolerance = meter_to_mapunit(50.0),
-    origin = motorways,
-)
-
-mainroads_gen1 = GeneralizedTable(
-    name = 'mainroads_gen1',
-    tolerance = meter_to_mapunit(50.0),
-    origin = mainroads,
-)
-
-railways_gen1 = GeneralizedTable(
-    name = 'railways_gen1',
-    tolerance = meter_to_mapunit(50.0),
-    origin = railways,
-)
-
-motorways_gen0 = GeneralizedTable(
-    name = 'motorways_gen0',
-    tolerance = meter_to_mapunit(200.0),
-    origin = motorways_gen1,
-)
-
-mainroads_gen0 = GeneralizedTable(
-    name = 'mainroads_gen0',
-    tolerance = meter_to_mapunit(200.0),
-    origin = mainroads_gen1,
-)
-
-railways_gen0 = GeneralizedTable(
-    name = 'railways_gen0',
-    tolerance = meter_to_mapunit(200.0),
-    origin = railways_gen1,
-)
-
 landusages_gen0 = GeneralizedTable(
     name = 'landusages_gen0',
     tolerance = meter_to_mapunit(200.0),
@@ -500,30 +302,105 @@ landusages_gen1 = GeneralizedTable(
     where = "ST_Area(geometry)>%f" % sqr_meter_to_mapunit(50000),
 )
 
-waterareas_gen0 = GeneralizedTable(
-    name = 'waterareas_gen0',
-    tolerance = meter_to_mapunit(200.0),
-    origin = waterareas,
-    where = "ST_Area(geometry)>%f" % sqr_meter_to_mapunit(500000),
-)
-
-waterareas_gen1 = GeneralizedTable(
-    name = 'waterareas_gen1',
-    tolerance = meter_to_mapunit(50.0),
-    origin = waterareas,
-    where = "ST_Area(geometry)>%f" % sqr_meter_to_mapunit(50000),
-)
-
-windturbines = Points(
-    name = 'windturbines',
+mainroads = Highway(
+    name = 'mainroads',
     mapping = {
-        'generator:source': (
-            'wind',
-         ),
+        'highway': (
+            'primary',
+            'primary_link',
+            'secondary',
+            'secondary_link',
+            'tertiary',
+            'tertiary_link',
+    )}
+)
+
+mainroads_gen0 = GeneralizedTable(
+    name = 'mainroads_gen0',
+    tolerance = meter_to_mapunit(200.0),
+    origin = mainroads_gen1,
+)
+
+mainroads_gen1 = GeneralizedTable(
+    name = 'mainroads_gen1',
+    tolerance = meter_to_mapunit(50.0),
+    origin = mainroads,
+)
+
+minorroads = Highway(
+    name = 'minorroads',
+    mapping = {
+        'highway': (
+            'road',
+            'path',
+            'track',
+            'service',
+            'footway',
+            'bridleway',
+            'cycleway',
+            'steps',
+            'pedestrian',
+            'living_street',
+            'unclassified',
+            'residential',
+            'raceway',
+    )}
+)
+
+motorways = Highway(
+    name = 'motorways',
+    mapping = {
+        'highway': (
+            'motorway',
+            'motorway_link',
+            'trunk',
+            'trunk_link',
+        ),
+    }
+)
+
+motorways_gen0 = GeneralizedTable(
+    name = 'motorways_gen0',
+    tolerance = meter_to_mapunit(200.0),
+    origin = motorways_gen1,
+)
+
+motorways_gen1 = GeneralizedTable(
+    name = 'motorways_gen1',
+    tolerance = meter_to_mapunit(50.0),
+    origin = motorways,
+)
+
+places = Points(
+    name = 'places',
+    mapping = {
+        'place': (
+            'country',
+            'state',
+            'region',
+            'county',
+            'city',
+            'town',
+            'village',
+            'hamlet',
+            'suburb',
+            'locality',
+        ),
     },
     fields = (
-        ('power', String()),
-        ('generator:type', String()),
+        ('z_order', ZOrder([
+            'country',
+            'state',
+            'region',
+            'county',
+            'city',
+            'town',
+            'village',
+            'hamlet',
+            'suburb',
+            'locality',
+        ])),
+        ('population', Integer()),
     ),
 )
 
@@ -550,5 +427,132 @@ powerpoles = Points(
     },
     fields = (
         ('height', Integer()),
+    ),
+)
+
+railways = LineStrings(
+    name = 'railways',
+    fields = (
+        ('tunnel', Bool()),
+        ('bridge', Bool()),
+        ('z_order', WayZOrder()),
+        ('access', String()),
+        ('service', String()),
+        ('usage', String()),
+    ),
+    mapping = {
+        'railway': (
+            'rail',
+            'tram',
+            'light_rail',
+            'subway',
+            'narrow_gauge',
+            'preserved',
+            'funicular',
+            'monorail',
+            'disused',
+            'abandoned',
+            'construction',
+    )}
+)
+
+railways_gen0 = GeneralizedTable(
+    name = 'railways_gen0',
+    tolerance = meter_to_mapunit(200.0),
+    origin = railways_gen1,
+)
+
+railways_gen1 = GeneralizedTable(
+    name = 'railways_gen1',
+    tolerance = meter_to_mapunit(50.0),
+    origin = railways,
+)
+
+transport_points = Points(
+    name = 'transport_points',
+    fields = (
+        ('ref', String()),
+    ),
+    mapping = {
+        'highway': (
+            'motorway_junction',
+            'turning_circle',
+            'bus_stop',
+        ),
+        'railway': (
+            'station',
+            'halt',
+            'tram_stop',
+            'crossing',
+            'level_crossing',
+            'subway_entrance',
+        ),
+        'aeroway': (
+            'aerodrome',
+            'terminal',
+            'helipad',
+            'gate',
+    )}
+)
+
+waterareas = Polygons(
+    name = 'waterareas',
+    fields = (
+        ('boat', String()),
+        ('area', PseudoArea()),
+    ),
+    mapping = {
+        'waterway': ('riverbank',),
+        'natural': ('water',),
+        'landuse': ('basin', 'reservoir'), 
+        'amenity': ('swimming_pool',),
+        'leisure': ('swimming_pool',),
+    },
+)
+
+waterareas_gen0 = GeneralizedTable(
+    name = 'waterareas_gen0',
+    tolerance = meter_to_mapunit(200.0),
+    origin = waterareas,
+    where = "ST_Area(geometry)>%f" % sqr_meter_to_mapunit(500000),
+)
+
+waterareas_gen1 = GeneralizedTable(
+    name = 'waterareas_gen1',
+    tolerance = meter_to_mapunit(50.0),
+    origin = waterareas,
+    where = "ST_Area(geometry)>%f" % sqr_meter_to_mapunit(50000),
+)
+
+waterways = LineStrings(
+    name = 'waterways',
+    mapping = {
+        'waterway': (
+            'stream',
+            'river',
+            'canal',
+            'drain',
+            'ditch',
+        ),
+    },
+    fields = (
+        ('boat', String()),
+        ('z_order', WayZOrder()),
+    ),
+    field_filter = (
+        ('tunnel', Bool()),
+    ),
+)
+
+windturbines = Points(
+    name = 'windturbines',
+    mapping = {
+        'generator:source': (
+            'wind',
+         ),
+    },
+    fields = (
+        ('power', String()),
+        ('generator:type', String()),
     ),
 )

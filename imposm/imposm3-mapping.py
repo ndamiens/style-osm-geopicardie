@@ -3,22 +3,22 @@
         "waterareas_gen1": {
             "source": "waterareas",
             "sql_filter": "ST_Area(geometry)>50000.000000",
-            "tolerance": 50.0
+            "tolerance": 50
         },
         "waterareas_gen0": {
             "source": "waterareas_gen1",
             "sql_filter": "ST_Area(geometry)>500000.000000",
-            "tolerance": 200.0
+            "tolerance": 200
         },
-        "roads_gen0": {
-            "source": "roads_gen1",
+        "roads_n_railways_gen0": {
+            "source": "roads_n_railways_gen1",
             "sql_filter": null,
-            "tolerance": 200.0
+            "tolerance": 200
         },
-        "roads_gen1": {
-            "source": "roads",
+        "roads_n_railways_gen1": {
+            "source": "roads_n_railways",
             "sql_filter": "type IN ('motorway', 'motorway_link', 'trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link') OR class IN('railway')",
-            "tolerance": 50.0
+            "tolerance": 50
         },
         "waterways_gen0": {
             "source": "waterways_gen1",
@@ -28,20 +28,334 @@
         "waterways_gen1": {
             "source": "waterways",
             "sql_filter": null,
-            "tolerance": 50.0
+            "tolerance": 50
         },
         "landusages_gen1": {
             "source": "landusages",
             "sql_filter": "ST_Area(geometry)>50000.000000",
-            "tolerance": 50.0
+            "tolerance": 50
         },
         "landusages_gen0": {
             "source": "landusages_gen1",
             "sql_filter": "ST_Area(geometry)>500000.000000",
-            "tolerance": 200.0
+            "tolerance": 200
         }
     },
     "tables": {
+        "aeroways": {
+            "fields": [
+                {
+                    "type": "id",
+                    "name": "osm_id",
+                    "key": null
+                },
+                {
+                    "type": "geometry",
+                    "name": "geometry",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "name",
+                    "key": "name"
+                },
+                {
+                    "type": "mapping_value",
+                    "name": "type",
+                    "key": null
+                }
+            ],
+            "type": "linestring",
+            "mapping": {
+                "aeroway": [
+                    "runway",
+                    "taxiway"
+                ]
+            }
+        },
+        "amenities": {
+            "fields": [
+                {
+                    "type": "id",
+                    "name": "osm_id",
+                    "key": null
+                },
+                {
+                    "type": "geometry",
+                    "name": "geometry",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "name",
+                    "key": "name"
+                },
+                {
+                    "type": "mapping_value",
+                    "name": "type",
+                    "key": null
+                }
+            ],
+            "type": "point",
+            "mapping": {
+                "amenity": [
+                    "university",
+                    "school",
+                    "library",
+                    "fuel",
+                    "hospital",
+                    "fire_station",
+                    "police",
+                    "townhall"
+                ]
+            }
+        },
+        "amenity_areas": {
+            "_comment": "for testing duplicate inserts with __any__ and exact match",
+            "fields": [
+                {
+                    "type": "id",
+                    "name": "osm_id",
+                    "key": null
+                },
+                {
+                    "type": "geometry",
+                    "name": "geometry",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "name",
+                    "key": "name"
+                },
+                {
+                    "type": "mapping_value",
+                    "name": "type",
+                    "key": null
+                }
+            ],
+            "type": "polygon",
+            "mapping": {
+                "building": [
+                    "shop"
+                ]
+            }
+        },
+        "barrierpoints": {
+            "fields": [
+                {
+                    "type": "id",
+                    "name": "osm_id",
+                    "key": null
+                },
+                {
+                    "type": "geometry",
+                    "name": "geometry",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "name",
+                    "key": "name"
+                },
+                {
+                    "type": "mapping_value",
+                    "name": "type",
+                    "key": null
+                }
+            ],
+            "type": "point",
+            "mapping": {
+                "barrier": [
+                    "block",
+                    "bollard",
+                    "cattle_grid",
+                    "chain",
+                    "cycle_barrier",
+                    "entrance",
+                    "horse_stile",
+                    "gate",
+                    "spikes",
+                    "lift_gate",
+                    "kissing_gate",
+                    "fence",
+                    "yes",
+                    "wire_fence",
+                    "toll_booth",
+                    "stile"
+                ]
+            }
+        },
+        "barrierways": {
+            "fields": [
+                {
+                    "type": "id",
+                    "name": "osm_id",
+                    "key": null
+                },
+                {
+                    "type": "geometry",
+                    "name": "geometry",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "name",
+                    "key": "name"
+                },
+                {
+                    "type": "mapping_value",
+                    "name": "type",
+                    "key": null
+                }
+            ],
+            "type": "linestring",
+            "mapping": {
+                "barrier": [
+                    "city_wall",
+                    "fence",
+                    "hedge",
+                    "retaining_wall",
+                    "wall",
+                    "bollard",
+                    "gate",
+                    "spikes",
+                    "lift_gate",
+                    "kissing_gate",
+                    "embankment",
+                    "yes",
+                    "wire_fence"
+                ]
+            }
+        },
+        "buildings": {
+            "fields": [
+                {
+                    "type": "id",
+                    "name": "osm_id",
+                    "key": null
+                },
+                {
+                    "type": "geometry",
+                    "name": "geometry",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "name",
+                    "key": "name"
+                },
+                {
+                    "type": "mapping_value",
+                    "name": "type",
+                    "key": null
+                }
+            ],
+            "type": "polygon",
+            "mapping": {
+                "building": [
+                    "__any__"
+                ],
+                "aeroway": [
+                    "terminal"
+                ]
+            }
+        },
+        "housenumbers": {
+            "fields": [
+                {
+                    "type": "id",
+                    "name": "osm_id",
+                    "key": null
+                },
+                {
+                    "type": "geometry",
+                    "name": "geometry",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "name",
+                    "key": "name"
+                },
+                {
+                    "type": "mapping_value",
+                    "name": "type",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "addr:street",
+                    "key": "addr:street"
+                },
+                {
+                    "type": "string",
+                    "name": "addr:postcode",
+                    "key": "addr:postcode"
+                },
+                {
+                    "type": "string",
+                    "name": "addr:city",
+                    "key": "addr:city"
+                }
+            ],
+            "type": "point",
+            "mapping": {
+                "addr:housenumber": [
+                    "__any__"
+                ]
+            }
+        },
+        "housenumbers_interpolated": {
+            "fields": [
+                {
+                    "type": "id",
+                    "name": "osm_id",
+                    "key": null
+                },
+                {
+                    "type": "geometry",
+                    "name": "geometry",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "name",
+                    "key": "name"
+                },
+                {
+                    "type": "mapping_value",
+                    "name": "type",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "addr:street",
+                    "key": "addr:street"
+                },
+                {
+                    "type": "string",
+                    "name": "addr:postcode",
+                    "key": "addr:postcode"
+                },
+                {
+                    "type": "string",
+                    "name": "addr:city",
+                    "key": "addr:city"
+                },
+                {
+                    "type": "string",
+                    "name": "addr:inclusion",
+                    "key": "addr:inclusion"
+                }
+            ],
+            "type": "linestring",
+            "mapping": {
+                "addr:interpolation": [
+                    "__any__"
+                ]
+            }
+        },
         "landusages": {
             "fields": [
                 {
@@ -74,6 +388,9 @@
                         "ranks": [
                             "pedestrian",
                             "footway",
+                            "aerodrome",
+                            "helipad",
+                            "apron",
                             "playground",
                             "park",
                             "forest",
@@ -168,7 +485,10 @@
                 ],
                 "aeroway": [
                     "runway",
-                    "taxiway"
+                    "taxiway",
+                    "aerodrome",
+                    "helipad",
+                    "apron"
                 ],
                 "place": [
                     "island"
@@ -201,70 +521,6 @@
                 "highway": [
                     "pedestrian",
                     "footway"
-                ]
-            }
-        },
-        "buildings": {
-            "fields": [
-                {
-                    "type": "id",
-                    "name": "osm_id",
-                    "key": null
-                },
-                {
-                    "type": "geometry",
-                    "name": "geometry",
-                    "key": null
-                },
-                {
-                    "type": "string",
-                    "name": "name",
-                    "key": "name"
-                },
-                {
-                    "type": "mapping_value",
-                    "name": "type",
-                    "key": null
-                }
-            ],
-            "type": "polygon",
-            "mapping": {
-                "building": [
-                    "__any__"
-                ],
-                "aeroway": [
-                    "terminal"
-                ],                
-            }
-        },
-        "amenity_areas": {
-            "_comment": "for testing duplicate inserts with __any__ and exact match",
-            "fields": [
-                {
-                    "type": "id",
-                    "name": "osm_id",
-                    "key": null
-                },
-                {
-                    "type": "geometry",
-                    "name": "geometry",
-                    "key": null
-                },
-                {
-                    "type": "string",
-                    "name": "name",
-                    "key": "name"
-                },
-                {
-                    "type": "mapping_value",
-                    "name": "type",
-                    "key": null
-                }
-            ],
-            "type": "polygon",
-            "mapping": {
-                "building": [
-                    "shop"
                 ]
             }
         },
@@ -331,7 +587,7 @@
                 ]
             }
         },
-        "transport_areas": {
+        "powerlines": {
             "fields": [
                 {
                     "type": "id",
@@ -352,145 +608,32 @@
                     "type": "mapping_value",
                     "name": "type",
                     "key": null
-                }
-            ],
-            "type": "polygon",
-            "mapping": {
-                "railway": [
-                    "station",
-                    "platform"
-                ],
-                "aeroway": [
-                    "aerodrome",
-                    "terminal",
-                    "helipad",
-                    "apron"
-                ]
-            }
-        },
-        "aeroways": {
-            "fields": [
-                {
-                    "type": "id",
-                    "name": "osm_id",
-                    "key": null
-                },
-                {
-                    "type": "geometry",
-                    "name": "geometry",
-                    "key": null
                 },
                 {
                     "type": "string",
-                    "name": "name",
-                    "key": "name"
+                    "name": "cables",
+                    "key": "cables"
                 },
                 {
-                    "type": "mapping_value",
-                    "name": "type",
-                    "key": null
+                    "type": "string",
+                    "name": "wires",
+                    "key": "wires"
+                },
+                {
+                    "type": "string",
+                    "name": "voltage",
+                    "key": "voltage"
                 }
             ],
             "type": "linestring",
             "mapping": {
-                "aeroway": [
-                    "runway",
-                    "taxiway"
+                "power": [
+                    "line",
+                    "minor_line"
                 ]
             }
         },
-        "waterways": {
-            "fields": [
-                {
-                    "type": "id",
-                    "name": "osm_id",
-                    "key": null
-                },
-                {
-                    "type": "geometry",
-                    "name": "geometry",
-                    "key": null
-                },
-                {
-                    "type": "string",
-                    "name": "name",
-                    "key": "name"
-                },
-                {
-                    "type": "string",
-                    "name": "boat",
-                    "key": "boat"
-                },
-                {
-                    "type": "wayzorder",
-                    "name": "z_order",
-                    "key": "layer"
-                },
-                {
-                    "type": "boolint",
-                    "name": "tunnel",
-                    "key": "tunnel"
-                },
-                {
-                    "type": "mapping_value",
-                    "name": "type",
-                    "key": null
-                }
-            ],
-            "type": "linestring",
-            "mapping": {
-                "waterway": [
-                    "stream",
-                    "river",
-                    "canal",
-                    "drain",
-                    "ditch"
-                ]
-            }
-        },
-        "barrierways": {
-            "fields": [
-                {
-                    "type": "id",
-                    "name": "osm_id",
-                    "key": null
-                },
-                {
-                    "type": "geometry",
-                    "name": "geometry",
-                    "key": null
-                },
-                {
-                    "type": "string",
-                    "name": "name",
-                    "key": "name"
-                },
-                {
-                    "type": "mapping_value",
-                    "name": "type",
-                    "key": null
-                }
-            ],
-            "type": "linestring",
-            "mapping": {
-                "barrier": [
-                    "city_wall",
-                    "fence",
-                    "hedge",
-                    "retaining_wall",
-                    "wall",
-                    "bollard",
-                    "gate",
-                    "spikes",
-                    "lift_gate",
-                    "kissing_gate",
-                    "embankment",
-                    "yes",
-                    "wire_fence"
-                ]
-            }
-        },
-        "transport_points": {
+        "powerpoles": {
             "fields": [
                 {
                     "type": "id",
@@ -513,167 +656,20 @@
                     "key": null
                 },
                 {
-                    "type": "string",
-                    "name": "ref",
-                    "key": "ref"
+                    "type": "integer",
+                    "name": "height",
+                    "key": "height"
                 }
             ],
             "type": "point",
             "mapping": {
-                "railway": [
-                    "station",
-                    "halt",
-                    "tram_stop",
-                    "crossing",
-                    "level_crossing",
-                    "subway_entrance"
-                ],
-                "aeroway": [
-                    "aerodrome",
-                    "terminal",
-                    "helipad",
-                    "gate"
-                ],
-                "highway": [
-                    "motorway_junction",
-                    "turning_circle",
-                    "bus_stop"
+                "power": [
+                    "pole",
+                    "tower"
                 ]
             }
         },
-        "amenities": {
-            "fields": [
-                {
-                    "type": "id",
-                    "name": "osm_id",
-                    "key": null
-                },
-                {
-                    "type": "geometry",
-                    "name": "geometry",
-                    "key": null
-                },
-                {
-                    "type": "string",
-                    "name": "name",
-                    "key": "name"
-                },
-                {
-                    "type": "mapping_value",
-                    "name": "type",
-                    "key": null
-                }
-            ],
-            "type": "point",
-            "mapping": {
-                "amenity": [
-                    "university",
-                    "school",
-                    "library",
-                    "fuel",
-                    "hospital",
-                    "fire_station",
-                    "police",
-                    "townhall"
-                ]
-            }
-        },
-        "barrierpoints": {
-            "fields": [
-                {
-                    "type": "id",
-                    "name": "osm_id",
-                    "key": null
-                },
-                {
-                    "type": "geometry",
-                    "name": "geometry",
-                    "key": null
-                },
-                {
-                    "type": "string",
-                    "name": "name",
-                    "key": "name"
-                },
-                {
-                    "type": "mapping_value",
-                    "name": "type",
-                    "key": null
-                }
-            ],
-            "type": "point",
-            "mapping": {
-                "barrier": [
-                    "block",
-                    "bollard",
-                    "cattle_grid",
-                    "chain",
-                    "cycle_barrier",
-                    "entrance",
-                    "horse_stile",
-                    "gate",
-                    "spikes",
-                    "lift_gate",
-                    "kissing_gate",
-                    "fence",
-                    "yes",
-                    "wire_fence",
-                    "toll_booth",
-                    "stile"
-                ]
-            }
-        },
-        "housenumbers_interpolated": {
-            "fields": [
-                {
-                    "type": "id",
-                    "name": "osm_id",
-                    "key": null
-                },
-                {
-                    "type": "geometry",
-                    "name": "geometry",
-                    "key": null
-                },
-                {
-                    "type": "string",
-                    "name": "name",
-                    "key": "name"
-                },
-                {
-                    "type": "mapping_value",
-                    "name": "type",
-                    "key": null
-                },
-                {
-                    "type": "string",
-                    "name": "addr:street",
-                    "key": "addr:street"
-                },
-                {
-                    "type": "string",
-                    "name": "addr:postcode",
-                    "key": "addr:postcode"
-                },
-                {
-                    "type": "string",
-                    "name": "addr:city",
-                    "key": "addr:city"
-                },
-                {
-                    "type": "string",
-                    "name": "addr:inclusion",
-                    "key": "addr:inclusion"
-                }
-            ],
-            "type": "linestring",
-            "mapping": {
-                "addr:interpolation": [
-                    "__any__"
-                ]
-            }
-        },
-        "roads": {
+        "roads_n_railways": {
             "fields": [
                 {
                     "type": "id",
@@ -736,6 +732,11 @@
                     "key": "service"
                 },
                 {
+                    "type": "string",
+                    "name": "usage",
+                    "key": "usage"
+                },
+                {
                     "type": "mapping_key",
                     "name": "class",
                     "key": null
@@ -744,7 +745,10 @@
             "type": "linestring",
             "filters": {
                 "exclude_tags": [
-                    ["area", "yes"]
+                    [
+                        "area",
+                        "yes"
+                    ]
                 ]
             },
             "mappings": {
@@ -800,7 +804,44 @@
                 }
             }
         },
-        "housenumbers": {
+        "transport_areas": {
+            "fields": [
+                {
+                    "type": "id",
+                    "name": "osm_id",
+                    "key": null
+                },
+                {
+                    "type": "geometry",
+                    "name": "geometry",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "name",
+                    "key": "name"
+                },
+                {
+                    "type": "mapping_value",
+                    "name": "type",
+                    "key": null
+                }
+            ],
+            "type": "polygon",
+            "mapping": {
+                "railway": [
+                    "station",
+                    "platform"
+                ],
+                "aeroway": [
+                    "aerodrome",
+                    "terminal",
+                    "helipad",
+                    "apron"
+                ]
+            }
+        },
+        "transport_points": {
             "fields": [
                 {
                     "type": "id",
@@ -824,24 +865,30 @@
                 },
                 {
                     "type": "string",
-                    "name": "addr:street",
-                    "key": "addr:street"
-                },
-                {
-                    "type": "string",
-                    "name": "addr:postcode",
-                    "key": "addr:postcode"
-                },
-                {
-                    "type": "string",
-                    "name": "addr:city",
-                    "key": "addr:city"
+                    "name": "ref",
+                    "key": "ref"
                 }
             ],
             "type": "point",
             "mapping": {
-                "addr:housenumber": [
-                    "__any__"
+                "railway": [
+                    "station",
+                    "halt",
+                    "tram_stop",
+                    "crossing",
+                    "level_crossing",
+                    "subway_entrance"
+                ],
+                "aeroway": [
+                    "aerodrome",
+                    "terminal",
+                    "helipad",
+                    "gate"
+                ],
+                "highway": [
+                    "motorway_junction",
+                    "turning_circle",
+                    "bus_stop"
                 ]
             }
         },
@@ -871,6 +918,11 @@
                     "type": "pseudoarea",
                     "name": "area",
                     "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "boat",
+                    "key": "boat"
                 }
             ],
             "type": "polygon",
@@ -890,6 +942,95 @@
                 ],
                 "leisure": [
                     "swimming_pool"
+                ]
+            }
+        },
+        "waterways": {
+            "fields": [
+                {
+                    "type": "id",
+                    "name": "osm_id",
+                    "key": null
+                },
+                {
+                    "type": "geometry",
+                    "name": "geometry",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "name",
+                    "key": "name"
+                },
+                {
+                    "type": "string",
+                    "name": "boat",
+                    "key": "boat"
+                },
+                {
+                    "type": "wayzorder",
+                    "name": "z_order",
+                    "key": "layer"
+                },
+                {
+                    "type": "boolint",
+                    "name": "tunnel",
+                    "key": "tunnel"
+                },
+                {
+                    "type": "mapping_value",
+                    "name": "type",
+                    "key": null
+                }
+            ],
+            "type": "linestring",
+            "mapping": {
+                "waterway": [
+                    "stream",
+                    "river",
+                    "canal",
+                    "drain",
+                    "ditch"
+                ]
+            }
+        },
+        "windturbines": {
+            "fields": [
+                {
+                    "type": "id",
+                    "name": "osm_id",
+                    "key": null
+                },
+                {
+                    "type": "geometry",
+                    "name": "geometry",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "name",
+                    "key": "name"
+                },
+                {
+                    "type": "mapping_value",
+                    "name": "type",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "power",
+                    "key": "power"
+                },
+                {
+                    "type": "string",
+                    "name": "generator:type",
+                    "key": "generator:type"
+                }
+            ],
+            "type": "point",
+            "mapping": {
+                "generator:source": [
+                    "wind"
                 ]
             }
         }
