@@ -20,7 +20,7 @@ UPDATE osm_landusages
 -- Changement de type de géométrie
 ALTER TABLE osm_landusages
   ALTER COLUMN geometry 
-  SET DATA TYPE geometry(MultiPolygon, 900913) 
+  SET DATA TYPE geometry(MultiPolygon, 3857) 
   USING ST_Multi(geometry);
 
 commit;

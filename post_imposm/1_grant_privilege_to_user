@@ -1,0 +1,33 @@
+-- grant select privilege to "user"
+
+GRANT SELECT ON TABLE osm_aeroways TO "user";
+GRANT SELECT ON TABLE osm_amenities TO "user";
+GRANT SELECT ON TABLE osm_amenity_areas TO "user";
+GRANT SELECT ON TABLE osm_areas_for_labels TO "user";
+GRANT SELECT ON TABLE osm_barrierpoints TO "user";
+GRANT SELECT ON TABLE osm_barrierways TO "user";
+GRANT SELECT ON TABLE osm_buildings TO "user";
+GRANT SELECT ON TABLE osm_housenumbers TO "user";
+GRANT SELECT ON TABLE osm_housenumbers_interpolated TO "user";
+GRANT SELECT ON TABLE osm_landusages TO "user";
+GRANT SELECT ON TABLE osm_landusages_gen0 TO "user";
+GRANT SELECT ON TABLE osm_landusages_gen1 TO "user";
+GRANT SELECT ON TABLE osm_places TO "user";
+GRANT SELECT ON TABLE osm_powerlines TO "user";
+GRANT SELECT ON TABLE osm_powerpoles TO "user";
+GRANT SELECT ON TABLE osm_roads_for_labels_int_ref TO "user";
+GRANT SELECT ON TABLE osm_roads_for_labels_name TO "user";
+GRANT SELECT ON TABLE osm_roads_for_labels_ref TO "user";
+GRANT SELECT ON TABLE osm_roads_n_railways TO "user";
+GRANT SELECT ON TABLE osm_roads_n_railways_gen0 TO "user";
+GRANT SELECT ON TABLE osm_roads_n_railways_gen1 TO "user";
+GRANT SELECT ON TABLE osm_transport_areas TO "user";
+GRANT SELECT ON TABLE osm_transport_points TO "user";
+GRANT SELECT ON TABLE osm_waterareas TO "user";
+GRANT SELECT ON TABLE osm_waterareas_gen0 TO "user";
+GRANT SELECT ON TABLE osm_waterareas_gen1 TO "user";
+GRANT SELECT ON TABLE osm_waterways TO "user";
+GRANT SELECT ON TABLE osm_waterways_for_labels TO "user";
+GRANT SELECT ON TABLE osm_waterways_gen0 TO "user";
+GRANT SELECT ON TABLE osm_waterways_gen1 TO "user";
+GRANT SELECT ON TABLE osm_windturbines TO "user";

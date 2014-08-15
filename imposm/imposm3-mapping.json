@@ -246,6 +246,11 @@
                     "key": "name"
                 },
                 {
+                    "type": "pseudoarea",
+                    "name": "area",
+                    "key": null
+                },
+                {
                     "type": "mapping_value",
                     "name": "type",
                     "key": null

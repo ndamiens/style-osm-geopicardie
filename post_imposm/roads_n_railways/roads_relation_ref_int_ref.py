@@ -38,11 +38,11 @@ print u"""-- Création de la table osm_road_relations
 CREATE TABLE osm_road_relations
 (
   osm_id bigint,
-  type character varying(255),
-  route character varying(255),
-  network character varying(255),
-  ref character varying(255),
-  name character varying(1024)
+  type character varying,
+  route character varying,
+  network character varying,
+  ref character varying,
+  name character varying
 )
 WITH (
   OIDS=FALSE
@@ -54,8 +54,8 @@ CREATE TABLE osm_road_relations_members
 (
   osm_id bigint,
   member_osm_id bigint,
-  type character varying(255),
-  role character varying(255)
+  type character varying,
+  role character varying
 )
 WITH (
   OIDS=FALSE

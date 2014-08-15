@@ -94,14 +94,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "polygon",
       "id": "landuse_gen0",
       "name": "landuse_gen0",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -115,14 +115,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "polygon",
       "id": "landuse_gen1",
       "name": "landuse_gen1",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -136,14 +136,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "polygon",
       "id": "landuse",
       "name": "landuse",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -157,14 +157,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "linestring",
       "id": "waterway_low",
       "name": "waterway_low",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -178,14 +178,14 @@
         "password": "user",
         "id": "waterway_med",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "linestring",
       "id": "waterway_med",
       "name": "waterway_med",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -199,14 +199,14 @@
         "password": "user",
         "id": "waterway_high",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "linestring",
       "id": "waterway_high",
       "name": "waterway_high",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -220,14 +220,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "polygon",
       "id": "water_gen0",
       "name": "water_gen0",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -241,14 +241,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "polygon",
       "id": "water_gen1",
       "name": "water_gen1",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -262,14 +262,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "polygon",
       "id": "water",
       "name": "water",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -281,14 +281,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "polygon",
       "id": "buildings",
       "name": "buildings",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -302,14 +302,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "linestring",
       "id": "aeroway",
       "name": "aeroway",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -317,19 +317,19 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "key_field": "",
-        "table": "( SELECT geometry, type, 0 as bridge, access,\nCASE\n    WHEN usage IN ('main') THEN 'main'\n    WHEN usage IN ('branch') THEN 'branch'\n    WHEN usage IN ('industrial') THEN 'industrial'\n    WHEN usage IN ('military') THEN 'military'\n    WHEN usage IN ('tourism') THEN 'tourism'\n    WHEN usage IS NULL THEN 'none'\n    ELSE 'other' END AS usage,\n CASE\n    WHEN service IN ('spur') THEN 'spur'\n    WHEN service IN ('yard') THEN 'yard'\n    WHEN service IN ('siding') THEN 'siding'\n    WHEN service IS NULL THEN 'none'\n    ELSE 'other' END AS service,\nrender, layer, tunnel,\n  CASE\n    WHEN type IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN type IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN type IN ('service', 'pedestrian') THEN 'restricted'\n    WHEN type IN ('track') THEN 'track'\n    WHEN type IN ('cycleway') THEN 'cycleway'\n    WHEN type IN ('path', 'footway', 'steps', 'bridleway') THEN 'path'\n    WHEN type IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM (\n    SELECT *, '1_outline' AS render FROM osm_roads WHERE geometry && !bbox! and tunnel = 1\n    UNION ALL\n    SELECT *, '2_line' AS render FROM osm_roads WHERE geometry && !bbox! and tunnel = 1\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM osm_roads WHERE geometry && !bbox! and tunnel = 1\n  ) AS tunnels\n  ORDER BY layer ASC, render ASC\n) AS data",
+        "table": "( SELECT geometry, type, 0 as bridge, access,\nCASE\n    WHEN usage IN ('main') THEN 'main'\n    WHEN usage IN ('branch') THEN 'branch'\n    WHEN usage IN ('industrial') THEN 'industrial'\n    WHEN usage IN ('military') THEN 'military'\n    WHEN usage IN ('tourism') THEN 'tourism'\n    WHEN usage IS NULL THEN 'none'\n    ELSE 'other' END AS usage,\n CASE\n    WHEN service IN ('spur') THEN 'spur'\n    WHEN service IN ('yard') THEN 'yard'\n    WHEN service IN ('siding') THEN 'siding'\n    WHEN service IS NULL THEN 'none'\n    ELSE 'other' END AS service,\nrender, z_order, tunnel,\n  CASE\n    WHEN type IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN type IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN type IN ('service', 'pedestrian') THEN 'restricted'\n    WHEN type IN ('track') THEN 'track'\n    WHEN type IN ('cycleway') THEN 'cycleway'\n    WHEN type IN ('path', 'footway', 'steps', 'bridleway') THEN 'path'\n    WHEN type IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM (\n    SELECT *, '1_outline' AS render FROM osm_roads_n_railways WHERE geometry && !bbox! and tunnel = 1\n    UNION ALL\n    SELECT *, '2_line' AS render FROM osm_roads_n_railways WHERE geometry && !bbox! and tunnel = 1\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM osm_roads_n_railways WHERE geometry && !bbox! and tunnel = 1\n  ) AS tunnels\n  ORDER BY z_order ASC, render ASC\n) AS data",
         "type": "postgis",
         "user": "user",
         "password": "user",
         "extent_cache": "auto",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "linestring",
       "id": "tunnel",
       "name": "tunnel",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
+      "srs-name": "3857",
       "extent": [
         -179.9999999749438,
         -85.051,
@@ -348,14 +348,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "point",
       "id": "turning_circle_case",
       "name": "turning_circle_case",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -367,14 +367,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "polygon",
       "id": "pedestrian_area_case",
       "name": "pedestrian_area_case",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -384,20 +384,20 @@
         "id": "roads_high",
         "key_field": "",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT geometry, type, tunnel, bridge, access,\nCASE\n    WHEN usage IN ('main') THEN 'main'\n    WHEN usage IN ('branch') THEN 'branch'\n    WHEN usage IN ('industrial') THEN 'industrial'\n    WHEN usage IN ('military') THEN 'military'\n    WHEN usage IN ('tourism') THEN 'tourism'\n    WHEN usage IS NULL THEN 'none'\n    ELSE 'other' END AS usage,\n CASE\n    WHEN service IN ('spur') THEN 'spur'\n    WHEN service IN ('yard') THEN 'yard'\n    WHEN service IN ('siding') THEN 'siding'\n    WHEN service IS NULL THEN 'none'\n    ELSE 'other' END AS service,\n  'fill' AS render,\n  CASE\n    WHEN type IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN type IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN type IN ('service', 'pedestrian') THEN 'restricted'\n    WHEN type IN ('track') THEN 'track'\n    WHEN type IN ('cycleway') THEN 'cycleway'\n    WHEN type IN ('path', 'footway', 'steps', 'bridleway') THEN 'path'\n    WHEN class IN ('railways') OR type IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM osm_roads\n  WHERE geometry && !bbox! and bridge = 0\n    AND tunnel = 0\n  ORDER BY z_order\n) AS data",
+        "table": "( SELECT geometry, type, tunnel, bridge, access,\nCASE\n    WHEN usage IN ('main') THEN 'main'\n    WHEN usage IN ('branch') THEN 'branch'\n    WHEN usage IN ('industrial') THEN 'industrial'\n    WHEN usage IN ('military') THEN 'military'\n    WHEN usage IN ('tourism') THEN 'tourism'\n    WHEN usage IS NULL THEN 'none'\n    ELSE 'other' END AS usage,\n CASE\n    WHEN service IN ('spur') THEN 'spur'\n    WHEN service IN ('yard') THEN 'yard'\n    WHEN service IN ('siding') THEN 'siding'\n    WHEN service IS NULL THEN 'none'\n    ELSE 'other' END AS service,\n  'fill' AS render,\n  CASE\n    WHEN type IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN type IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN type IN ('service', 'pedestrian') THEN 'restricted'\n    WHEN type IN ('track') THEN 'track'\n    WHEN type IN ('cycleway') THEN 'cycleway'\n    WHEN type IN ('path', 'footway', 'steps', 'bridleway') THEN 'path'\n    WHEN class IN ('railways') OR type IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM osm_roads_n_railways\n  WHERE geometry && !bbox! and bridge = 0\n    AND tunnel = 0\n  ORDER BY z_order\n) AS data",
         "type": "postgis",
         "user": "user",
         "password": "user",
         "extent_cache": "auto",
         "project": "geopicardie_topo",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "linestring",
       "id": "roads_high",
       "name": "roads_high",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
+      "srs-name": "3857",
       "extent": [
         -179.9999999749438,
         -85.051,
@@ -412,20 +412,20 @@
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "",
         "key_field": "",
-        "table": "( SELECT geometry, type\n  FROM osm_roads_gen1\n  WHERE type IN ('motorway', 'trunk', 'primary', 'secondary', 'motorway_link', 'trunk_link') and geometry && !bbox!) AS data",
+        "table": "( SELECT geometry, type\n  FROM osm_roads_n_railways_gen1\n  WHERE type IN ('motorway', 'trunk', 'primary', 'secondary', 'motorway_link', 'trunk_link') and geometry && !bbox!) AS data",
         "type": "postgis",
         "user": "user",
         "password": "user",
         "id": "roads_med",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "linestring",
       "id": "roads_med",
       "name": "roads_med",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -433,18 +433,18 @@
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "geometry",
         "key_field": "",
-        "table": "( SELECT geometry, type FROM osm_roads_gen0 WHERE geometry && !bbox!) AS data",
+        "table": "( SELECT geometry, type FROM osm_roads_n_railways_gen0 WHERE geometry && !bbox!) AS data",
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "linestring",
       "id": "roads_low",
       "name": "roads_low",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -456,14 +456,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "polygon",
       "id": "pedestrian_area_fill",
       "name": "pedestrian_area_fill",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -475,14 +475,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "point",
       "id": "turning_circle_fill",
       "name": "turning_circle_fill",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -492,19 +492,19 @@
         "id": "bridge",
         "key_field": "",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT geometry, type, bridge, access,\nCASE\n    WHEN usage IN ('main') THEN 'main'\n    WHEN usage IN ('branch') THEN 'branch'\n    WHEN usage IN ('industrial') THEN 'industrial'\n    WHEN usage IN ('military') THEN 'military'\n    WHEN usage IN ('tourism') THEN 'tourism'\n    WHEN usage IS NULL THEN 'none'\n    ELSE 'other' END AS usage,\n CASE\n    WHEN service IN ('spur') THEN 'spur'\n    WHEN service IN ('yard') THEN 'yard'\n    WHEN service IN ('siding') THEN 'siding'\n    WHEN service IS NULL THEN 'none'\n    ELSE 'other' END AS service,\nrender, layer, 0 as tunnel,\n  CASE\n    WHEN type IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN type IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN type IN ('service', 'pedestrian') THEN 'restricted'\n    WHEN type IN ('track') THEN 'track'\n    WHEN type IN ('cycleway') THEN 'cycleway'\n    WHEN type IN ('path', 'footway', 'steps', 'bridleway') THEN 'path'\n    WHEN class IN ('railways') OR type IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM (\n    SELECT *, '1_outline' AS render FROM osm_roads WHERE bridge = 1 and geometry && !bbox! \n    UNION ALL\n    SELECT *, '2_line' AS render FROM osm_roads WHERE bridge = 1 and geometry && !bbox! \n    UNION ALL\n    SELECT *, '3_inline' AS render FROM osm_roads WHERE bridge = 1 and geometry && !bbox! \n  ) as bridges\n  ORDER BY layer ASC, render ASC\n) AS data",
+        "table": "( SELECT geometry, type, bridge, access,\nCASE\n    WHEN usage IN ('main') THEN 'main'\n    WHEN usage IN ('branch') THEN 'branch'\n    WHEN usage IN ('industrial') THEN 'industrial'\n    WHEN usage IN ('military') THEN 'military'\n    WHEN usage IN ('tourism') THEN 'tourism'\n    WHEN usage IS NULL THEN 'none'\n    ELSE 'other' END AS usage,\n CASE\n    WHEN service IN ('spur') THEN 'spur'\n    WHEN service IN ('yard') THEN 'yard'\n    WHEN service IN ('siding') THEN 'siding'\n    WHEN service IS NULL THEN 'none'\n    ELSE 'other' END AS service,\nrender, z_order, 0 as tunnel,\n  CASE\n    WHEN type IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN type IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN type IN ('service', 'pedestrian') THEN 'restricted'\n    WHEN type IN ('track') THEN 'track'\n    WHEN type IN ('cycleway') THEN 'cycleway'\n    WHEN type IN ('path', 'footway', 'steps', 'bridleway') THEN 'path'\n    WHEN class IN ('railways') OR type IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM (\n    SELECT *, '1_outline' AS render FROM osm_roads_n_railways WHERE bridge = 1 and geometry && !bbox! \n    UNION ALL\n    SELECT *, '2_line' AS render FROM osm_roads_n_railways WHERE bridge = 1 and geometry && !bbox! \n    UNION ALL\n    SELECT *, '3_inline' AS render FROM osm_roads_n_railways WHERE bridge = 1 and geometry && !bbox! \n  ) as bridges\n  ORDER BY z_order ASC, render ASC\n) AS data",
         "type": "postgis",
         "user": "user",
         "password": "user",
         "extent_cache": "auto",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "linestring",
       "id": "bridge",
       "name": "bridge",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
+      "srs-name": "3857",
       "advanced": {},
       "extent": [
         -179.9999999749438,
@@ -523,14 +523,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "point",
       "id": "barrier_points",
       "name": "barrier_points",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -544,14 +544,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "linestring",
       "id": "barrier_lines",
       "name": "barrier_lines",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -563,14 +563,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "polygon",
       "id": "roofs",
       "name": "roofs",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "geometry": "point",
@@ -586,7 +586,7 @@
         "file": "./layers/10m-populated-places/10m-populated-places.shp",
         "encoding": "LATIN1"
       },
-      "srs-name": "900913",
+      "srs-name": "3857",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {
         "encoding": "LATIN1"
@@ -605,14 +605,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "point",
       "id": "place",
       "name": "place",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -628,14 +628,14 @@
         "password": "user",
         "extent_cache": "auto",
         "project": "geopicardie_topo_12",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "point",
       "id": "area_label",
       "name": "area_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
+      "srs-name": "3857",
       "advanced": {}
     },
     {
@@ -651,14 +651,14 @@
         "password": "user",
         "extent_cache": "auto",
         "extent": "7349.59481127445,6027408.8355078,731182.322849574,6716105.79236794",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "linestring",
       "id": "road_label_name",
       "name": "road_label_name",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
+      "srs-name": "3857",
       "extent": [
         0.06602253351053368,
         47.52024639170859,
@@ -680,14 +680,14 @@
         "password": "user",
         "extent_cache": "auto",
         "extent": "7349.59481127445,6027408.8355078,731182.322849574,6716105.79236794",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "linestring",
       "id": "road_label_ref",
       "name": "road_label_ref",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
+      "srs-name": "3857",
       "extent": [
         0.06602253351053368,
         47.52024639170859,
@@ -708,14 +708,14 @@
         "type": "postgis",
         "user": "user",
         "password": "user",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "linestring",
       "id": "waterway_label",
       "name": "waterway_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "3857"
     },
     {
       "Datasource": {
@@ -725,19 +725,19 @@
         "id": "waterway_label",
         "key_field": "",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT geometry,type,oneway FROM osm_roads  WHERE geometry && !bbox! and oneway!=0) AS data",
+        "table": "( SELECT geometry,type,oneway FROM osm_roads_n_railways  WHERE geometry && !bbox! and oneway!=0) AS data",
         "type": "postgis",
         "user": "user",
         "password": "user",
         "extent_cache": "auto",
-        "srid": "900913"
+        "srid": "3857"
       },
       "class": "",
       "geometry": "linestring",
       "id": "oneway_roads",
       "name": "oneway_roads",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
+      "srs-name": "3857",
       "extent": [
         1.494595721287779,
         49.92586509154295,
@@ -745,7 +745,7 @@
         51.09244027032182
       ],
       "advanced": {
-        "srid": "900913"
+        "srid": "3857"
       }
     }
   ],
