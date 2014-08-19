@@ -79,8 +79,9 @@ Map {
 @standard_case:     @standard_line;
 @standard_tunnel_fill: #fcfcfc;
 
-@motorway_line:     #B25968;
-@motorway_fill:     lighten(@motorway_line, 46%);
+// C74646  A13D36 D9453D C25A50 B31D2D
+@motorway_line:     lighten(#B31D2D, 10%);
+@motorway_fill:     lighten(@motorway_line, 65%);
 @motorway_case:     @motorway_line;
 @motorway_tunnel_fill: @motorway_fill;
 
