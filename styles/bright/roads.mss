@@ -50,11 +50,17 @@ as well. */
   ::outline {
     [type='motorway'],
     [type='motorway_link'] {
-      line-color: @motorway_line;
+      line-color: lighten(@motorway_line, 12%);
+      [zoom=9] {
+        line-color: lighten(@motorway_line, 16%);
+      }
     }
     [type='trunk'],
     [type='trunk_link'] {
-      line-color: @trunk_line;
+      line-color: lighten(@trunk_line, 12%);
+      [zoom=9] {
+        line-color: lighten(@trunk_line, 16%);
+      }
     }
     [type='primary'] { line-color: @primary_line; }
     [type='secondary'] { line-color: @secondary_line; }
