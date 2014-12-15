@@ -215,10 +215,10 @@
   line-color: darken(@water,@waterarea_darken_border_factor);
   polygon-fill: @water;
   line-width: 0.0;
-  [zoom>0][ScaleRank<1] { line-width: 0.4; }
-  [zoom>2][ScaleRank<2] { line-width: 0.5; }
-  [zoom>3][ScaleRank<3] { line-width: 0.5; }
-  [zoom>4][ScaleRank<4] { line-width: 0.5; }
+  [zoom>0][scalerank<1] { line-width: 0.4; }
+  [zoom>2][scalerank<2] { line-width: 0.5; }
+  [zoom>3][scalerank<3] { line-width: 0.5; }
+  [zoom>4][scalerank<4] { line-width: 0.5; }
 }
 
 #water_gen0[zoom>7][zoom<=9],
@@ -244,10 +244,10 @@
 #10m_rivers[zoom<=5] {
   line-color: darken(@water,@waterway_darken_border_factor);
   line-width: 0.0;
-  [zoom>0][ScaleRank<=2] { line-width: 0.4; }
-  [zoom>2][ScaleRank<=4] { line-width: 0.5; }
-  [zoom>3][ScaleRank<=5] { line-width: 0.5; }
-  [zoom>4][ScaleRank<=6] { line-width: 0.5; }
+  [zoom>0][scalerank<=2] { line-width: 0.4; }
+  [zoom>2][scalerank<=4] { line-width: 0.5; }
+  [zoom>3][scalerank<=5] { line-width: 0.5; }
+  [zoom>4][scalerank<=6] { line-width: 0.5; }
 }
 
 #waterway_low[zoom>5][zoom<=12] {
