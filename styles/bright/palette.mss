@@ -11,11 +11,11 @@ Map {
 
 /* Fonts                                                              */
 @sans_light:            "Exo Light";
-@sans:                  "Exo Demi Bold";
-@sans_bold:             "Exo Extra Bold";
-@sans_italic:           "Exo Regular Italic";
-@sans_semi_bold_italic: "Exo Demi Bold Italic";
-@sans_bold_italic:      "Exo Bold Italic";
+@sans:                  "Exo DemiBold";
+@sans_bold:             "Exo ExtraBold";
+@sans_italic:           "Exo RegularItalic";
+@sans_semi_bold_italic: "Exo DemiBoldItalic";
+@sans_bold_italic:      "Exo BoldItalic";
 
 /* land use colors                                                    */
 @land:              #FFFEF5;
