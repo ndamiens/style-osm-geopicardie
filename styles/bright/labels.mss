@@ -257,17 +257,21 @@
 
 #place::locality[type='locality']
 [zoom>=15] {
-  text-name:'[name]';
-  text-face-name:@sans;
-  text-placement:point;
-  text-fill:lighten(@town_text,25%);
-  text-size:@town_text_size;
-  text-halo-fill:lighten(@town_halo,25%);
-  text-halo-radius:2;
+  text-name: '[name]';
+  text-face-name: @sans_light;
+  text-placement: point;
+  text-fill: lighten(@town_text,10%);
+//  text-size: @town_text_size;
+  text-size: 8;
+  text-halo-fill: fadeout(@town_halo,30%);
+  text-halo-radius: 2;
   text-wrap-width: 50;
   text-min-distance: 40;
   text-character-spacing: 2;
   text-line-spacing: 2;
+  text-placements: 'NE,NW,N,E,SE,W,SW,S';
+  text-dx: 5;
+  text-dy: -5;
 }
 
 /* ================================================================== */
