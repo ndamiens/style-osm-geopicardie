@@ -258,10 +258,9 @@
 #place::locality[type='locality']
 [zoom>=15] {
   text-name: '[name]';
-  text-face-name: @sans_light;
+  text-face-name: @sans_light_italic;
   text-placement: point;
-  text-fill: lighten(@town_text,10%);
-//  text-size: @town_text_size;
+  text-fill: lighten(@town_text,27%);
   text-size: 8;
   text-halo-fill: fadeout(@town_halo,30%);
   text-halo-radius: 2;

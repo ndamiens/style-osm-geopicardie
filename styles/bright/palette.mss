@@ -14,6 +14,7 @@ Map {
 @sans:                  "Exo Demi Bold";
 @sans_bold:             "Exo Extra Bold";
 @sans_italic:           "Exo Regular Italic";
+@sans_light_italic:     "Exo Light Italic";
 @sans_semi_bold_italic: "Exo Demi Bold Italic";
 @sans_bold_italic:      "Exo Bold Italic";
 
