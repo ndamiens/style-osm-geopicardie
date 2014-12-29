@@ -370,7 +370,8 @@
 #road_label_name {
   [type='primary'][zoom>12],
   [type='secondary'][zoom>13],
-  [type='tertiary'][zoom>14] {
+  [type='tertiary'][zoom>15],
+  [type='residential'][zoom>16] {
     text-name:'[name]';
     text-face-name:@sans;
     text-size:10;
