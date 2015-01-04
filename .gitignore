@@ -10,3 +10,7 @@ styles/bright/layers/*
 !styles/bright/layers/insert natural earth shapefiles here.txt
 styles/bright/fonts/*
 !styles/bright/fonts/insert exo font here.txt
+styles/grey/layers/*
+!styles/grey/layers/insert natural earth shapefiles here.txt
+styles/grey/fonts/*
+!styles/grey/fonts/insert exo font here.txt
