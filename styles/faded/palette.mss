@@ -19,11 +19,11 @@ Map {
 @sans_bold_italic:      "Exo Bold Italic";
 
 /* land use colors                                                    */
-@land:              #FFFEF5;
-@urban:             #DDDDDD;
-@water:             #C4DFF6;
-@grass:             #D4F2C4;
-@wood:              #BEE5A9;
+@land:              #FFFFFF;
+@urban:             #EBEBEB;
+@water:             #DFEEFB;
+@grass:             #F4F9EB;
+@wood:              #E8F2D8;
 
 @beach:             @land;
 @agriculture:       @land;
@@ -42,7 +42,7 @@ Map {
 @aerodrome:         lighten(@urban, 10%);
 
 /* Building color                                                     */
-@building:          darken(@urban, 15%);
+@building:          darken(@urban, 7%);
 
 /* Stream and canal line features                                     */
 @stream:            lighten(@water, 15%);
@@ -75,12 +75,12 @@ Map {
  *         inner fill (inline).
  */
 
-@standard_line:     #999;
+@standard_line:     lighten(#999, 18%);
 @standard_fill:     #fff;
 @standard_case:     @standard_line;
 @standard_tunnel_fill: #fcfcfc;
 
-@motorway_line:     lighten(#B31D2D, 10%);
+@motorway_line:     lighten(#B31D2D, 32%);
 @motorway_fill:     lighten(@motorway_line, 65%);
 @motorway_case:     @motorway_line;
 @motorway_tunnel_fill: @motorway_fill;
@@ -110,7 +110,7 @@ Map {
 @small_bridge_fill: @urban;
 @small_bridge_case: darken(@small_bridge_fill, 30%);
 
-@rail_fill:         #888;
+@rail_fill:         lighten(#888, 30%);
 @rail_bridge_fill:  @urban;
 
 @aeroway:           darken(@aerodrome, 5%);
@@ -123,17 +123,16 @@ Map {
    at once or override each individually. */
 @place_halo:        fadeout(#fff, 25%);
 
-@city_text:         #222;
+@city_text:         #888;
 @city_halo:         @place_halo;
 @city_marker_opacity: 1.00;
 @city_text_size:    12;
 
-@town_text:         #222;
+@town_text:         #888;
 @town_halo:         @place_halo;
 @town_text_size:    11;
 
-/*BCR @road_text:         #555;*/
-@road_text:         #777;
+@road_text:         #BBB;
 @road_halo:         @place_halo;
 
 /* ****************************************************************** */
