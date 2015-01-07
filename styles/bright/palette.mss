@@ -18,7 +18,6 @@ Map {
 @sans_semi_bold_italic: "Exo DemiBoldItalic";
 @sans_bold_italic:      "Exo BoldItalic";
 
-
 /* land use colors                                                    */
 @land:              #FFFEF5;
 @urban:             #DDDDDD;
