@@ -11,11 +11,12 @@ Map {
 
 /* Fonts                                                              */
 @sans_light:            "Exo Light";
-@sans:                  "Exo Demi Bold";
-@sans_bold:             "Exo Extra Bold";
-@sans_italic:           "Exo Regular Italic";
-@sans_semi_bold_italic: "Exo Demi Bold Italic";
-@sans_bold_italic:      "Exo Bold Italic";
+@sans:                  "Exo DemiBold";
+@sans_bold:             "Exo ExtraBold";
+@sans_italic:           "Exo RegularItalic";
+@sans_light_italic:     "Exo LightItalic";
+@sans_semi_bold_italic: "Exo DemiBoldItalic";
+@sans_bold_italic:      "Exo BoldItalic";
 
 /* land use colors                                                    */
 @land:              #FFFEF5;
@@ -79,7 +80,6 @@ Map {
 @standard_case:     @standard_line;
 @standard_tunnel_fill: #fcfcfc;
 
-// C74646  A13D36 D9453D C25A50 B31D2D
 @motorway_line:     lighten(#B31D2D, 10%);
 @motorway_fill:     lighten(@motorway_line, 65%);
 @motorway_case:     @motorway_line;

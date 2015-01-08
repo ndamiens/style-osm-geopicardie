@@ -3,8 +3,9 @@
 
 begin;
 
-update osm_motorways set ref=substring(ref,'^([ANDC])')||' '||substring(ref, '^[A-Z]([0-9]+)') where ref ~ '^[ANDC][0-9]+$';
-update osm_mainroads set ref=substring(ref,'^([ANDC])')||' '||substring(ref, '^[A-Z]([0-9]+)') where ref ~ '^[ANDC][0-9]+$';
-update osm_minorroads set ref=substring(ref,'^([ANDC])')||' '||substring(ref, '^[A-Z]([0-9]+)') where ref ~ '^[ANDC][0-9]+$';
+UPDATE osm_roads_n_railways
+	SET ref=substring(ref,'^([ANDC])')||' '||substring(ref, '^[A-Z]([0-9]+)')
+	WHERE ref ~ '^[ANDC][0-9]+$'
+		AND type != 'rail';
 
 commit;

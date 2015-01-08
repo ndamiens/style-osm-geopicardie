@@ -5,10 +5,10 @@ DROP TABLE if exists osm_waterways_for_labels;
 -- Création des tables
 CREATE TABLE osm_waterways_for_labels
 (
-  class character varying(255),
-  type character varying(255),
-  name character varying(255),
-  geometry geometry(LineString,900913)
+  class character varying,
+  type character varying,
+  name character varying,
+  geometry geometry(LineString,3857)
 )
 WITH (
   OIDS=FALSE

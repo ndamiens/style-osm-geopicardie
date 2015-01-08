@@ -6,10 +6,10 @@ DROP TABLE if exists osm_areas_for_labels;
 CREATE TABLE osm_areas_for_labels
 (
   id serial,
-  type character varying(255),
-  name character varying(255),
+  type character varying,
+  name character varying,
   area real,
-  geometry geometry(Polygon,900913)
+  geometry geometry(Polygon,3857)
 )
 WITH (
   OIDS=FALSE
