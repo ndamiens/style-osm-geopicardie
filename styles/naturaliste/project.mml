@@ -801,5 +801,5 @@
   "metatile": 3,
   "attribution": "Data © OpenStreetMap (and) contributors, styles CC-BY-SA",
   "description": "OSM styles for GeoPicardie - OSM Bright, Flickr and Exo font based",
-  "name": "GeoPicardie Topo Bright"
+  "name": "GeoPicardie Topo Bright + naturalist overlays"
 }
