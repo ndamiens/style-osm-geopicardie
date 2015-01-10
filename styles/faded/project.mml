@@ -24,7 +24,7 @@
   "Layer": [
     {
       "Datasource": {
-        "file": "./layers/10m-land/10m-land.shp",
+        "file": "../shared/layers/10m-land/10m-land.shp",
         "id": "10m_land",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
@@ -36,7 +36,7 @@
     },
     {
       "Datasource": {
-        "file": "./layers/coastline-good/coastline-good.shp",
+        "file": "../shared/layers/coastline-good/coastline-good.shp",
         "id": "coastline",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
@@ -48,7 +48,7 @@
     },
     {
       "Datasource": {
-        "file": "./layers/shoreline_300/shoreline_300.shp",
+        "file": "../shared/layers/shoreline_300/shoreline_300.shp",
         "id": "shoreline",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
@@ -60,7 +60,7 @@
     },
     {
       "Datasource": {
-        "file": "./layers/10m-rivers/10m-rivers.shp",
+        "file": "../shared/layers/10m-rivers/10m-rivers.shp",
         "id": "10m_rivers",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
@@ -72,7 +72,7 @@
     },
     {
       "Datasource": {
-        "file": "./layers/10m-lakes/10m-lakes.shp",
+        "file": "../shared/layers/10m-lakes/10m-lakes.shp",
         "id": "10m_lakes",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
@@ -583,7 +583,7 @@
       "id": "10m_populated_places",
       "class": "",
       "Datasource": {
-        "file": "./layers/10m-populated-places/10m-populated-places.shp",
+        "file": "../shared/layers/10m-populated-places/10m-populated-places.shp",
         "encoding": "LATIN1"
       },
       "srs-name": "3857",

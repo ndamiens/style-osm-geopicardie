@@ -6,15 +6,5 @@ imposm/*.cache
 *.swo
 *.osm.bz2
 styles/*/.thumb.png
-styles/bright/layers/*
-!styles/bright/layers/insert natural earth shapefiles here.txt
-styles/bright/fonts/*
-!styles/bright/fonts/insert exo font here.txt
-styles/grey/layers/*
-!styles/grey/layers/insert natural earth shapefiles here.txt
-styles/grey/fonts/*
-!styles/faded/fonts/insert exo font here.txt
-styles/faded/layers/*
-!styles/faded/layers/insert natural earth shapefiles here.txt
-styles/faded/fonts/*
-!styles/faded/fonts/insert exo font here.txt
+styles/shared/layers/*
+!styles/shared/layers/insert natural earth shapefiles here.txt
