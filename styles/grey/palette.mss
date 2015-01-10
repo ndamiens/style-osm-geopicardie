@@ -85,6 +85,9 @@ Map {
 @motorway_case:     @motorway_line;
 @motorway_tunnel_fill: @motorway_fill;
 
+@roads_low_outline_color: lighten(@motorway_line, 25%);
+@roads_med_outline_color: lighten(@motorway_line, 15%);
+
 @trunk_line:        @motorway_line;
 @trunk_fill:        @motorway_fill;
 @trunk_case:        @motorway_case;
