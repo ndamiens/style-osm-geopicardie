@@ -1,3 +1,10 @@
 intermediaire.xml
 mapnik.xml
 Thumbs.db
+imposm/*.cache
+*.swp
+*.swo
+*.osm.bz2
+styles/*/.thumb.png
+styles/shared/layers/*
+!styles/shared/layers/insert natural earth shapefiles here.txt

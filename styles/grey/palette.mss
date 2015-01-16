@@ -19,11 +19,11 @@ Map {
 @sans_bold_italic:      "Exo BoldItalic";
 
 /* land use colors                                                    */
-@land:              #FFFEF5;
-@urban:             #DDDDDD;
-@water:             #C4DFF6;
-@grass:             #D4F2C4;
-@wood:              #BEE5A9;
+@land:              #FFFFFF;
+@urban:             #cfcfcf;
+@water:             #f0f0f0;
+@grass:             #ececec;
+@wood:              #e0e0e0;
 
 @beach:             @land;
 @agriculture:       @land;
@@ -80,7 +80,7 @@ Map {
 @standard_case:     @standard_line;
 @standard_tunnel_fill: #fcfcfc;
 
-@motorway_line:     lighten(#B31D2D, 10%);
+@motorway_line:     lighten(#555, 10%);
 @motorway_fill:     lighten(@motorway_line, 65%);
 @motorway_case:     @motorway_line;
 @motorway_tunnel_fill: @motorway_fill;
@@ -126,12 +126,12 @@ Map {
    at once or override each individually. */
 @place_halo:        fadeout(#fff, 25%);
 
-@city_text:         #222;
+@city_text:         #555;
 @city_halo:         @place_halo;
 @city_marker_opacity: 1.00;
 @city_text_size:    12;
 
-@town_text:         #222;
+@town_text:         #555;
 @town_halo:         @place_halo;
 @town_text_size:    11;
 
